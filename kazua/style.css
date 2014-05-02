@@ -14,7 +14,7 @@ body{
 }
 
 /*** Header ***/
-#header{ width: 100%; background:#fff;}
+#header{ width: 100%;  height: 40px; background:#fff;}
 #header-superior{ width: 100%; background:#f8f8f8;}
 #header-superior-content{ width: 1000px; margin:0 auto; overflow:hidden; border-bottom: 1px solid #e1e1e1; z-index:9}
 #header-paginas{width:1000px; margin:0 auto;float:right}
@@ -100,8 +100,8 @@ body{
 #header-social{float:left; display:block; margin: 12px 0 0 10px; float: left;}
 
 #header-content-ii{ width:1000px; margin: 0 auto; overflow: hidden; padding-top: 15px; z-index: 600}
-#header-zungueira{ width: 500px; float:left; text-align:left}
-#header-negra-anastacia{ width: 500px; float:left;}
+#header-zungueira{ width: 500px; float:right; text-align:left}
+#header-negra-anastacia{     float: left;    width: 475px;}
 
 /***corpo ***/
 #container{ width:1000px; margin:0 auto;margin-top:15px; z-index: 799;position:relative}
