@@ -1,0 +1,193 @@
+/*
+
+Theme Name: Portal Kazua;
+Description: Portal da editora Kazua. Desenvolvido com WordPress;
+Author: Aloiso Junior <webmaster@webdeverdade.com.br>;
+Version: 1.0.0;
+
+*/
+*{margin:0; padding: 0}
+body{
+	background: #fff;
+	font: 14px arial, tahoma, verdana;
+	text-align: center;
+}
+
+/*** Header ***/
+#header{ width: 100%; background:#fff;}
+#header-superior{ width: 100%; background:#f8f8f8;}
+#header-superior-content{ width: 1000px; margin:0 auto; overflow:hidden; border-bottom: 1px solid #e1e1e1; z-index:9}
+#header-paginas{width:1000px; margin:0 auto;float:right}
+/*#header-paginas ul{ width:1000px; margin:0 auto; list-style: none;  text-align:left; z-index:9}
+#header-paginas ul li{ float: left; position:relative;}
+#header-paginas ul li a{ color: #777; text-decoration: none; padding: 10px 50px; display: block; font-size:13px; font-weight:bold; border-right: 0px solid #e1e1e1; text-align:left; float:left}
+#header-paginas ul li a:hover{ color: #e43333; background: #ececec;}
+#header-paginas ul li ul {position:absolute; display:none;  top:25px; left:0px; z-index: 10}
+#header-paginas ul li ul li{float:left;display:block}
+#header-paginas ul li:hover ul{ display:block}*/
+
+.menu-principal{ width:1000px; margin:0 auto; list-style: none;  text-align:left;}
+.menu-principal li{ float: left; position:relative;}
+.menu-principal li a{ color: #777; text-decoration: none; display: block; font-size:13px; font-weight:bold; border-right: 0px solid #e1e1e1; text-align:left; float:left}
+.menu-principal li a:hover { color: #e43333; background: #ececec;}
+.menu-principal li ul {position:absolute; display:none;  width: 190px; height: auto;top:35px; left:0px; background:#FFFFFF; border-bottom:none;z-index:900}
+.menu-principal li ul li{display:block; float:left;}
+.menu-principal li ul li a{display:block; float:left; width:170px;}
+
+.menu-principal li ul li ul{ left: 200px; top:-1px; width: 200px;}
+.menu-principal li ul li ul li a{ width: 200px;}
+
+.menu-principal li:hover > ul, .menu-principal li.over > ul{ display:block}
+
+
+.menu-principal-academicas { width:1000px; position:absolute;}
+.menu-principal-academicas li:hover > ul, .menu-principal li.over > ul{ display:block}{ width:1000px; margin:0 auto; list-style: none;  text-align:left;}
+.menu-principal-academicas li{ float: left; position:relative;}
+.menu-principal-academicas li a{ color: #777; text-decoration: none; display: block; font-size:11px; font-weight:bold; border-right: 0px solid #e1e1e1; text-align:left; float:left}
+.menu-principal-academicas li a:hover { color: #e43333; background: #ececec;}
+.menu-principal-academicas li ul {position:absolute; display:none;  width: 270px; height: auto;top:32px; left:0px; background:#FFFFFF; border:1px solid #777; border-bottom:none;z-index:900}
+.menu-principal-academicas li ul li{display:block; float:left;}
+.menu-principal-academicas li ul li a{display:block; padding: 10px 50px;float:left; width:170px; border-bottom: 1px solid black;}
+
+.menu-principal-academicas li ul li ul{ left: 270px; top:-1px; width: 300px;}
+.menu-principal-academicas li ul li ul li a{ width: 200px;}
+
+.menu-principal-academicas li:hover > ul, .menu-principal-academicas li.over > ul{ display:block}
+
+.menu-principal-zungueira li:hover > ul, .menu-principal li.over > ul{ display:block}{ width:1000px; margin:0 auto; list-style: none;  text-align:left;}
+.menu-principal-zungueira li{ float: left; position:relative;}
+.menu-principal-zungueira li a{ color: #777; text-decoration: none; display: block; width:132px;font-size:11px; font-weight:bold; border: 1px solid #e1e1e1; text-align:center; float:left}
+.menu-principal-zungueira li a:hover { color: #e43333; background: #ececec;}
+.menu-principal-zungueira li ul {position:absolute; display:none;  width: 170px; top:30px; left:0px; background:#FFFFFF; border-bottom:none;z-index:900}
+.menu-principal-zungueira li ul li{display:block; float:left; padding:0px}
+.menu-principal-zungueira li ul li a{display:block; float:left; width:170px; }
+.menu-principal-zungueira li ul li ul{ left: 270px; top:-1px; width: 300px;}
+.menu-principal-zungueira li ul li ul li a{ width: 200px;}
+
+.menu-principal-na li:hover > ul, .menu-principal-academicas li.over > ul{ display:block}
+.menu-principal-na li:hover > ul, .menu-principal li.over > ul{ display:block}{ width:1000px; margin:0 auto; list-style: none;  text-align:left;}
+.menu-principal-na li{ float: left; position:relative;}
+.menu-principal-na li a{ color: #777; text-decoration: none; display: block; width:220px;font-size:11px; font-weight:bold; border: 1px solid #e1e1e1; text-align:center; float:left}
+.menu-principal-na li a:hover { color: #e43333; background: #ececec;}
+.menu-principal-na li ul {position:absolute; display:none;  width: 170px; top:30px; left:0px; background:#FFFFFF; border-bottom:none;z-index:900}
+.menu-principal-na li ul li{display:block; float:left; padding:0px}
+.menu-principal-na li ul li a{display:block; float:left; width:170px; }
+.menu-principal-na li ul li ul{ left: 270px; top:-1px; width: 300px;}
+.menu-principal-na li ul li ul li a{ width: 200px;}
+
+.menu-principal-trabalhe li:hover > ul, .menu-principal li.over > ul{ display:block}{ width:1000px; margin:0 auto; list-style: none;  text-align:left;}
+.menu-principal-trabalhe li{ float: left; position:relative;}
+.menu-principal-trabalhe li a{ color: #777; text-decoration: none; display: block; width:165px;font-size:11px; font-weight:bold; border: 1px solid #e1e1e1; text-align:center; float:left}
+.menu-principal-trabalhe li a:hover { color: #e43333; background: #ececec;}
+.menu-principal-trabalhe li ul {position:absolute; display:none;  width: 170px; top:30px; left:0px; background:#FFFFFF; border-bottom:none;z-index:900}
+.menu-principal-trabalhe li ul li{display:block; float:left; padding:0px}
+.menu-principal-trabalhe li ul li a{display:block; float:left; width:170px; }
+.menu-principal-trabalhe li ul li ul{ left: 270px; top:-1px; width: 300px;}
+.menu-principal-trabalhe li ul li ul li a{ width: 200px;}
+
+
+
+
+
+
+
+#header-content{ width:1000px; margin: 0 auto; overflow: hidden; padding-top: 15px;position:relative}
+#header-content-blog{ width:1000px; overflow: hidden; padding-top: 15px; position:relative; margin: 0 auto}
+#logo{ float: left}
+#header-content-seja-autor{ float:left; width:500px; padding:0px 10px}
+#header-content-seja-autor ul{ list-style:none; padding:10px;}
+#header-content-seja-autor li{}
+#header-social{float:left; display:block; margin: 12px 0 0 10px; float: left;}
+
+#header-content-ii{ width:1000px; margin: 0 auto; overflow: hidden; padding-top: 15px; z-index: 600}
+#header-zungueira{ width: 500px; float:left; text-align:left}
+#header-negra-anastacia{ width: 500px; float:left;}
+
+/***corpo ***/
+#container{ width:1000px; margin:0 auto;margin-top:15px; z-index: 799;position:relative}
+#content{background:#FFFFFF; width:700px; float:left;z-index: 799;position:relative}
+#logo-loja img{ width:700px}
+#sidebar{background:url('images/back_blog.jpg'); background-size:100%; width:300px; float:left}
+#sidebar .foto{ width:60px; height:60px; float:left; margin: 5px}
+#sidebar .foto img{ width:50px;}
+#sidebar .blog-post{  margin-left:25px; padding:10px 0px; width:250px}
+#sidebar .blog-post .blog-title{ width:100%;}
+#sidebar .blog-post p{font-size: 10px; align:justify; color:black; text-shadow:2px 2px #fff; background: rgba(200,200,200, 0.5);}
+
+
+/*=== seja autor ===*/
+#header-extendido{ width: 1000px; height:70px;z-index: 800}
+#header-extendido p{ text-align: justify;}
+#box-principal { width:670px; }
+#box-principal h3, #box-principal h2 { margin:20px 0px}
+.box-botao{ display:block;width: 163px; float:left;  margin-right:4px; height:25px; font-size: 15px; text-decoration:none}
+.box-botao-extendido{ display:block;width: 664px; float:left; height:25px;margin: 7px 0px 20px 0px; font-size: 15px; text-decoration:none}
+.box-botao-extendido img{ width: 662px}
+.box-botao-i{ display:block;width: 215px; margin:0px 2px 7px 0px;float:left; height:25px; font-size: 15px; text-decoration:none}
+.box-botao-ii{ display:block;width: 331px; margin:0px 2px 2px 0px;float:left; border: 1px solid black; height:25px; padding-top: 5px; font-size: 15px; text-decoration:none}
+.box-botao-iii{ display:block;width: 666px; margin:0px 2px 2px 0px;float:left; border: 1px solid black; height:25px; padding-top: 5px; font-size: 15px; text-decoration:none}
+
+#box-principal p {text-align: justify;}
+#box-principal ul {text-align: justify;}
+/*#box-principal ul li{margin-top:10px}*/
+#box-principal h3, #box-principal b{ display:block; text-align:left}
+
+/*=== blog autor ===*/
+
+#capa{ width:100%;height:300px;}
+#timeline{ width:100%;height:90px;}
+#header-content-blog img{position:absolute; left: 40px; top:40%; width:200px; z-index:950}
+#box-recados{ width: 100%; margin-top:20px}
+#box-recados-titulo{ width: 100%; border: 1px solid black}
+#box-recados-titulo p { font-size:20px;padding:10px}
+.box-comentarios { width:100%; clear:both; height:100px; margin: 10px 0px; border: 1px solid #e1e1e1}
+.box-comentarios img{ margin:10px 10px 0px 10px;}
+
+#catalogo{ width:100%; padding:20px;float:left}
+.exemplar{ width: 155px; float: left; margin: 5px; height:280px; position:relative; border: 1px solid #e1e1e1}
+.exemplar img{ height:150px}
+
+/*=== autores kaza ====*/
+
+#box-principal .img-autor-kaza{ position:relative;width:150px; margin:0; float:left}
+#box-principal .img-autor-kaza p { display:none;position:absolute;width:150px;background:#fff; bottom:20px;padding-left:7px}
+#box-principal .img-autor-kaza .img-autor-moldura{ position:absolute; width:150px; top:0px;left:0px;display:none}
+
+#mnu_modos_publicacao{ width:600px; margin:0 auto; list-style: none;  text-align:left}
+
+#mnu_modos_publicacao li a{ color: #777; text-decoration: none; /*padding: 10px 50px;*/ display: block; font-size:13px; font-weight:bold; border-right: 0px solid #e1e1e1; text-align:left;}
+#mnu_modos_publicacao li a:hover{ color: #e43333; background: #ececec;}
+
+
+/*== formulario ==*/
+form .object{ width: 600px;float:left; padding-bottom:20px}
+form .object-label{ width: 200px;float:left; text-align:right; padding:10px 20px 0px 0px; font-size:16px; font-weight:bold}
+form .object-control{ width: 350px;float:left; text-align:left}
+form .object-control input{ width:100%; height: 30px }
+
+
+/*== blog ==*/
+div.postagem { width:inherit; background:url('images/back_blog.jpg');background-size:100%;}
+div#blog_post { background: rgba(255,255,255,0.6); margin:30px}
+div.postagem h2, div.postagem h3{text-align:left}
+div.postagem h3{margin-bottom:20px}
+div.postagem img{ float:left; margin-bottom:10px}
+div.postagem p{ margin-bottom:20px; text-align:justify}
+
+
+/*== pagina autor ==*/
+div.capa-autor { width: 100%; position:relative}
+
+div.menu-autor { width:100%; height:85px; }
+div.foto-autor { width:150px; position: absolute; top: 120px; left:10px; background:#000; border-radius:4px 5px; border:1px solid #000; text-align:center;padding:2px}
+
+div.menu-autor ul{ position:relative; width:500px; float:left; left:177px; top: 10px}
+div.menu-autor ul li{ float:left}
+div.menu-autor ul li a {width:118px; height:30px; display:block; text-decoration:none; text-align:center; margin-left:-1px; color:#777}
+div.menu-autor ul li a img{width:118px;}
+div.menu-autor ul li a:hover{ background:#e1e1e1}
+
+
+
+
+
