@@ -1,0 +1,371 @@
+/*
+Theme Name: Tema Kazua
+Theme URI: http://editorakazua.com.br/wp-content/themes/new-Theme
+Description: Tema para editora Kazuá
+Author: Diego Rojas
+Author URI: diegorojas.wordpress.com
+Template: twentytwelve
+Version: 0.1
+*/
+
+@import url("../twentytwelve/style.css");
+
+
+/*Cabeçalho
+---------------------------------------------------------------*/
+#header {
+	padding: 10px 0 0 0;
+}
+
+#branding{
+	border-top-width : 5px;
+	color:#C90;
+}
+
+.site-header h1 a{
+    background: url('imagens/logo-kazua.gif') no-repeat scroll !important;
+	text-indent: -99999px;
+	width: 230px;
+	height: 200px;
+    float: left;
+	margin-top: 10px;
+}
+
+#header-content-seja-autor {
+    float: left;
+    margin: 0 20px;
+    width: 600px;
+	height: 220px;
+	background: url('imagens/kazua-banner-principal.jpg') no-repeat scroll !important;
+}
+
+
+.link-seja-autor {
+	height: 230px;
+    width: 500px;
+}
+
+#header-content-terceiro {
+    float: left;
+    margin: 0 20px;
+}
+
+
+.main-navigation {
+    margin-bottom: 1em;
+	margin-top: 1em;
+}
+
+
+/*reduzir espacamento antes do header*/
+
+body {
+
+    margin-top: -25px; !important;
+
+}
+
+/*menu*/
+
+
+
+#access {
+
+    background: #FFF;
+
+	border:#999 thin;
+
+   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+
+}
+
+#access a {
+
+	color: black;
+
+	font-weight: bold;
+
+	padding: 0 0.6em;
+
+}
+
+
+
+/* menu - subniveis*/
+
+
+
+#access ul ul a {
+    background: none repeat scroll 0 0 #F9F9F9;
+    border-bottom: 1px dotted #CCCCCC;
+    color: #000;
+   font-size: 12px;
+    font-weight: normal;
+    height: auto;
+    line-height: 1em;
+    padding: 10px;
+}
+
+
+
+#access ul ul a:hover {
+
+	font-weight:bold;
+
+}
+
+
+
+/*imagens*/
+
+img.alignleft, img.alignright, img.aligncenter {
+
+	margin-bottom: 1em;
+
+}
+
+
+
+/*margens laterais das paginas de conteudo*/
+
+
+.singular .entry-header, .singular .entry-content, .singular footer.entry-meta, .singular #comments-title {
+    margin: -35px;
+    width: 110%;
+
+}
+
+
+/*remover botao search*/
+
+branding #searchform {
+	display:none;
+	}
+
+
+#branding .only-search + #access div {
+	padding-right: 0px;
+}
+
+/*rodape de widgets*/
+
+#supplementary {
+	background-color: #EFEFEF;
+
+}
+
+/*formator fontes*/
+
+p {
+	margin-bottom:1.5em;
+}
+
+h1{
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	color: #666;
+	line-height: 100%;
+}
+
+/*rodape - site generator*/
+
+
+#site-generator {
+
+	color: #FFF;
+	background-color: #000;
+	font-size: 14px;
+	line-height: 1.2em;
+	padding: 1.2em 0.5em;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	text-decoration: none;
+}
+
+
+/*bloco de comentario*/
+
+#respond {
+
+    background: none repeat scroll 0 0 transparent;
+    border: 0px;
+    }
+
+
+/*ocultar no plugin de imagem*/
+
+.slideshowlink {
+    display: none;
+}
+
+/*ocultar 'be the first like this*/
+
+.wpl-count{
+	display:none;
+
+}
+
+
+/*segunda area do rodape*/
+
+
+
+#supplementary.three .widget-area {
+    float: left;
+    margin-right: 8%;
+    width: 28%;
+}
+
+/*remover linha meta abaixo dos cometarios*/
+
+.singular footer.entry-meta {
+
+	display: none;
+
+}
+
+/*espacamento entre linhas no titulo do comentario*/
+
+.singular .entry-title {
+	line-height: 100%;
+	padding-bottom: 20px;
+	padding-top: 20px;
+
+}
+
+/*noticias recentes*/
+
+.addw2p {
+
+	font-size: 12px;
+    list-style-image: none;
+    list-style-type: none;
+    margin-left: -40px;
+
+}
+
+
+.addw2p li{
+
+	list-style-type: none;
+	margin-left: -30px;
+
+}
+
+/*caixas de lancamentos*/
+
+
+.wp-caption .wp-caption-text:before {
+
+	content: "";
+
+	}
+
+element.style {
+    padding: 0;
+    width: 130px;
+}
+
+.wp-caption .wp-caption-text, .gallery-caption {
+
+	color: black;
+	font-family: Georgia, serif;
+	font-size: 12px;
+	text-align: center;
+	margin-top: 15px;
+	font-weight: bold;
+
+}
+
+
+.wp-caption .wp-caption-text {
+
+    padding: 0;
+
+}
+
+#page {
+
+	background: #fff;
+	max-width: 1000px;
+
+
+}
+
+
+
+.singular #primary {
+
+	margin-top:-50px;
+	margin-bottom:20px;
+
+	}
+
+
+img[class*="align"], img[class*="wp-image-"], #content .gallery .gallery-icon img {
+
+	margin-top:2px;
+
+}
+
+/*botao enviar*/
+
+.fm-form input.submit {
+	float:right;
+}
+
+#comments-title {
+   line-height:4.6em;
+
+}
+
+#access ul {
+
+	margin: 0 0 0 -1em;
+
+}
+
+h1.h2_home {
+
+	font-size:22px;
+	margin-left:65px;
+	margin-top:10px;
+	color:#333;
+
+}
+
+
+
+p.catalogotitulo{
+
+	font-size:14px;
+	font-weight:bold;
+	margin-bottom:0;
+
+}
+
+p.catalogoautor{
+
+	font-size:10px;
+
+}
+
+#content .gallery .gallery-icon img {
+
+    margin-bottom: -20px;
+    margin-top: 2px;
+
+}
+
+#esquerda {
+	float:left;
+	position:relative;
+	width:68%;
+}
+	
+#direita {
+	float:right;
+	position:relative;
+	width:30%;
+}
+
+
