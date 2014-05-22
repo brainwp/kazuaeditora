@@ -56,6 +56,88 @@ Version: 0.1
 	margin-top: 1em;
 }
 
+#header-zungueira {
+    float: left;
+    text-align: left;
+    width: 500px;
+	min-height: 170px;
+}
+
+
+#header-zungueira .imagem-destaque {
+	background: none;
+	display: block;
+    height: 170px;
+	width: 145px;
+	margin: 1px 10px 0 0;
+	float: left;
+}
+
+#header-zungueira .texto-imagem-destaque{
+	background: none;
+	display: block;
+    height: 170px;
+	width: 340px;
+	float: left;
+}
+
+#header-negra-anastacia {
+    float: left;
+    width: 480px;
+	min-height: 170px;
+    margin-right: 20px;
+}
+
+#header-negra-anastacia .imagem-destaque {
+	background: none;
+	display: block;
+    height: 170px;
+    margin: 0 10px 0 5px;
+    width: 125px;
+	float: left;
+}
+
+#header-negra-anastacia .texto-imagem-destaque{
+	background: none;
+	display: block;
+    height: 170px;
+	width: 340px;
+	float: left;
+}
+
+#header-estudos-academicos {
+    float: left;
+    width: 1000px;
+	clear: both;
+	height: 40px;
+	margin-bottom: 20px;
+}
+
+a#logo-loja {
+
+	background: none;
+	display: block;
+    height: 170px;
+    margin: 0 10px 0 5px;
+    width: auto;
+	float: left;
+
+}
+
+#catalogo {
+    float: left;
+    padding: 20px;
+    width: 100%;
+}
+
+.exemplar {
+    border: 1px solid #E1E1E1;
+    float: left;
+    height: 280px;
+    margin: 5px;
+    position: relative;
+    width: 155px;
+}
 
 /*reduzir espacamento antes do header*/
 
@@ -356,16 +438,17 @@ p.catalogoautor{
 
 }
 
-#esquerda {
+.esquerda-home {
 	float:left;
 	position:relative;
-	width:68%;
+	width:65%;
+	margin-right: 2%;
 }
 	
-#direita {
-	float:right;
+.direita-home {
+	float:left;
 	position:relative;
-	width:30%;
+	width:33%;
 }
 
 
