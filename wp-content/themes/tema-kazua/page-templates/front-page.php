@@ -146,9 +146,6 @@ get_header(); ?>
 
 		<div id="content" class="direita-home" role="main">
 			<?php get_sidebar('front'); ?>
-		<a href="#">
-			<img src="<?php bloginfo('stylesheet_directory'); ?>/imagens/rodape-blog.jpg" width="100%" height="auto" alt="" />
-				</a>
 
 		</div><!-- #content .direita-home -->
 
