@@ -47,10 +47,18 @@
 		
 			<a class="link-seja-autor" href="<?php echo esc_url( home_url( '/seja-autor' ) ); ?>">
 				<div id="header-content-seja-autor">
+					<img src="<?php bloginfo('stylesheet_directory'); ?>/imagens/kazua-banner-principal.jpg" width="100%" height="auto" alt="" />
 				</div>
 			</a>
 
 				<div id="header-content-terceiro">
+
+				<a class="header-button-seja-autor" href="<?php echo esc_url( home_url( '/seja-autor' ) ); ?>">
+				Botão Seja Autor
+				</a>
+				<a class="footer-button-seja-autor" href="<?php echo esc_url( home_url( '/seja-autor' ) ); ?>">
+				<img src="<?php bloginfo('stylesheet_directory'); ?>/imagens/envie-seu-original.jpg" width="100%" height="auto" alt="" />
+				</a>
 				</div>
 
 		</hgroup>

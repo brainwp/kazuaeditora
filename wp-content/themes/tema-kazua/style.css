@@ -22,6 +22,12 @@ Version: 0.1
 	color:#C90;
 }
 
+.site-header h1 {
+    display: block;
+    height: auto;
+    margin-left: 12px;
+}
+
 .site-header h1 a{
     background: url('imagens/logo-kazua.gif') no-repeat scroll !important;
 	text-indent: -99999px;
@@ -32,24 +38,42 @@ Version: 0.1
 }
 
 #header-content-seja-autor {
+	background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
     float: left;
+    height: 195px;
     margin: 0 20px;
-    width: 600px;
-	height: 220px;
-	background: url('imagens/kazua-banner-principal.jpg') no-repeat scroll !important;
+    width: 530px;
 }
 
-
 .link-seja-autor {
-	height: 230px;
-    width: 500px;
+   float: left;
+    margin: 13px 20px 0 5px;
+    width: 550px;
 }
 
 #header-content-terceiro {
     float: left;
-    margin: 0 20px;
+    margin: 12px 0 0;
+	width: 160px;
 }
 
+a.header-button-seja-autor {
+	background: url("imagens/botao-buraco.jpg") no-repeat scroll 0 0 rgba(0, 0, 0, 0) !important;
+    float: left;
+    height: 180px;
+    margin: 0;
+    width: 160px;
+	text-indent: -999px;
+}
+
+a.header-button-seja-autor:hover {
+	background: url("imagens/botao-buraco-hover.jpg") no-repeat scroll 0 0 rgba(0, 0, 0, 0) !important;
+}
+
+a.footer-button-seja-autor {
+
+
+}
 
 .main-navigation {
     margin-bottom: 1em;
@@ -145,6 +169,10 @@ body {
 
     margin-top: -25px; !important;
 
+}
+
+.site-content {
+    margin: 1em 0 0;
 }
 
 /*menu*/
@@ -251,6 +279,19 @@ h1{
 
 /*rodape - site generator*/
 
+#colophon {
+	background: #000;
+	padding: 1.2em 0 0.8em;
+	margin-left: 0;
+    margin-right: 0;
+	width: 100%;
+	max-width: none;
+}
+
+#colophon .site-info {
+	max-width: 550px;
+	margin: 0 auto;
+}
 
 #site-generator {
 

@@ -128,8 +128,10 @@ get_header(); ?>
 						<a style="display:block;width:70px; position:absolute;text-decoration:none; color:#777; background:#e1e1e1; border:1px solid #777; text-align:center; bottom:10px; left:40px" href="http://www.zungueira.com.br/no-diva-palhaco-carlos-biaggioli.html">Comprar</a>
 					</div>
 				</div>	
-
-		</div> <!-- #content -->
+				<a href="#">
+			<img src="<?php bloginfo('stylesheet_directory'); ?>/imagens/rodape-loja.jpg" width="100%" height="auto" alt="" />
+				</a>
+		</div> <!-- #content .esquerda-home -->
 
 			<?php // while ( have_posts() ) : the_post(); ?>
 				<?php // if ( has_post_thumbnail() ) : ?>
@@ -144,6 +146,10 @@ get_header(); ?>
 
 		<div id="content" class="direita-home" role="main">
 			<?php get_sidebar('front'); ?>
-		</div>
+		<a href="#">
+			<img src="<?php bloginfo('stylesheet_directory'); ?>/imagens/rodape-blog.jpg" width="100%" height="auto" alt="" />
+				</a>
+
+		</div><!-- #content .direita-home -->
 
 <?php get_footer(); ?>
