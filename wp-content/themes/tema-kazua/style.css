@@ -209,6 +209,54 @@ body {
 
 .site-content {
     margin: 1em 0 0;
+    float: left;
+    width: 59%;
+}
+
+.site-content article {
+    margin-left: 13px;
+}
+
+.entry-header .entry-title {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.widget-area {
+    width: 38%;
+}
+
+#single-navigation {
+    clear: both;
+    display: block;
+    margin: 20px auto -25px;
+    overflow: hidden;
+    width: 100%;
+}
+
+#single-navigation ul {
+	background: none repeat scroll 0 0 none !important;
+    height: 35px;
+    list-style: none outside none;
+    margin: 0 0 20px;
+    padding-left: 0;
+}
+
+#single-navigation li {
+    float: left;
+    position: relative;
+}
+
+#single-navigation a {
+    background: none repeat scroll 0 0 none;
+    color: #222222;
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+#single-navigation li:hover > a {
+    background-color: #EEE;
 }
 
 /*menu*/
