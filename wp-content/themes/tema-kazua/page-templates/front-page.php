@@ -133,22 +133,8 @@ get_header(); ?>
 				</a>
 		</div> <!-- #content .esquerda-home -->
 
-			<?php // while ( have_posts() ) : the_post(); ?>
-				<?php // if ( has_post_thumbnail() ) : ?>
-					<!-- <div class="entry-page-image">
-						<?php// the_post_thumbnail(); ?>
-					</div> .entry-page-image -->
-				<?php // endif; ?>
-
-				<?php // get_template_part( 'content', 'page' ); ?>
-
-			<?php // endwhile; // end of the loop. ?>
-
 		<div id="content" class="direita-home" role="main">
 			<?php get_sidebar('front'); ?>
-		<p></p>
-		<div class="fb-like-box" data-href="https://www.facebook.com/editorakazua" data-width="350" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div>
-
 		</div><!-- #content .direita-home -->
 
 <?php get_footer(); ?>

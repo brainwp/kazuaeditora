@@ -21,7 +21,7 @@ if ( ! is_active_sidebar( 'sidebar-2' ) )
 // If we get this far, we have widgets. Let do this.
 ?>
 	<img src="<?php bloginfo('stylesheet_directory'); ?>/imagens/BLOG.jpg" width="100%" height="auto" alt="" />
-
+	<div class="posts-query-home">
  <!-- Inicio Loop -->
       	<?php
 		if ( query_posts( array ( 'post_type'=>'post', 'post_status' => 'publish', 'posts_per_page' => 5 )) ) while ( have_posts() ) : the_post(); 
@@ -48,18 +48,12 @@ if ( ! is_active_sidebar( 'sidebar-2' ) )
 			<?php endwhile; // end of the loop. ?>
 
 			<?php wp_reset_query(); // reset query ?>
-
+		</div>
 	    <!-- Fim Loop -->
 	
-<!-- <div id="secondary" class="widget-area" role="complementary"> -->
-	<?php // if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
-	<!--<div class="first front-widgets">
-		<?php // dynamic_sidebar( 'sidebar-2' ); ?>
-	</div> .first -->
-	<?php // endif; ?>
 		<a id="botao-de-baixo-blog" href="<?php echo esc_url( home_url( '/blog' ) ); ?>" target="_blank">
 	<img src="<?php bloginfo('stylesheet_directory'); ?>/imagens/rodape-blog.jpg" width="100%" height="auto" alt="" />
 		</a>
-</div><!-- #secondary -->
 
+		<div class="fb-like-box" data-href="https://www.facebook.com/editorakazua" data-width="350" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div>
 
