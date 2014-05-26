@@ -50,85 +50,85 @@ get_header(); ?>
 
 		<div id="content" class="esquerda-home" role="main">
 
-				<a id="logo-loja">
+				<a id="logo-loja" href="http://www.zungueira.com.br/" target="_blank">
 				<img src="<?php bloginfo('stylesheet_directory'); ?>/imagens/logo-loja.jpg" width="100%" height="auto" alt="" />
 				</a><!-- Fim logo-loja -->
 				<div id="catalogo">
 					<div class="exemplar" >
-						<img src="<?php bloginfo('stylesheet_directory'); ?>/imagens/eu_sou_o_que_rezo_pra_mim-capa.jpg" width="100%" height="auto" />
-						<p><a style="color:#777" href="http://www.zungueira.com.br/lancamentos/eu-sou-o-que-rezo-pra-mim-de-negra-anastacia.html">Eu sou o que rezo pra mim, de Negra Anastácia</a></p>
-						<p style="margin-top: 10px;">R$ 37,00</p>
-						<a style="display:block;width:70px; position:absolute;text-decoration:none; color:#777; background:#e1e1e1; border:1px solid #777; text-align:center; bottom:10px; left:40px" href="http://www.zungueira.com.br/lancamentos/eu-sou-o-que-rezo-pra-mim-de-negra-anastacia.html">Comprar</a>
+						<img src="<?php bloginfo('stylesheet_directory'); ?>/imagens/eu_sou_o_que_rezo_pra_mim-capa.jpg" width="100%" height="auto" alt="" />
+						<a style="color:#777" href="http://www.zungueira.com.br/lancamentos/eu-sou-o-que-rezo-pra-mim-de-negra-anastacia.html">Eu sou o que rezo pra mim, de Negra Anastácia</a>
+						<p class="preco-exemplar">R$ 37,00</p>
+						<a id="botao-comprar" href="http://www.zungueira.com.br/lancamentos/eu-sou-o-que-rezo-pra-mim-de-negra-anastacia.html">Comprar</a>
 					</div>
 					<div class="exemplar" >
-						<img src="<?php bloginfo('stylesheet_directory'); ?>/imagens/poema-preta-capa.jpg"  />
-						<p><a style="color:#777"href="http://www.zungueira.com.br/lancamentos/poema-preta-de-negra-anastacia.html">Poema Preta, de Negra Anastácia</a></p>
-						<p style="margin-top: 10px;">R$35,00</p>
-						<a style="display:block;width:70px; position:absolute;text-decoration:none; color:#777; background:#e1e1e1; border:1px solid #777; text-align:center; bottom:10px; left:40px" href="http://www.zungueira.com.br/lancamentos/poema-preta-de-negra-anastacia.html">Comprar</a>
+						<img src="<?php bloginfo('stylesheet_directory'); ?>/imagens/poema-preta-capa.jpg"  width="100%" height="auto" alt=""/>
+						<a style="color:#777"href="http://www.zungueira.com.br/lancamentos/poema-preta-de-negra-anastacia.html">Poema Preta, de Negra Anastácia</a>
+						<p class="preco-exemplar">R$35,00</p>
+						<a id="botao-comprar" href="http://www.zungueira.com.br/lancamentos/poema-preta-de-negra-anastacia.html">Comprar</a>
 					</div>					
 					<div class="exemplar" >
-						<img src="<?php bloginfo('stylesheet_directory'); ?>/imagens/o-mar-quando-mergulho-capa.jpg"  />
-						<p><a style="color:#777"href="http://www.zungueira.com.br/lancamentos/o-mar-e-quando-mergulho-de-negra-anastacia.html">O mar é quando mergulho, de Negra Anastácia</a></p>
-						<p style="margin-top: 10px;">R$32,00</p>
-						<a style="display:block;width:70px; position:absolute;text-decoration:none; color:#777; background:#e1e1e1; border:1px solid #777; text-align:center; bottom:10px; left:40px" href="http://www.zungueira.com.br/lancamentos/o-mar-e-quando-mergulho-de-negra-anastacia.html">Comprar</a>
+						<img src="<?php bloginfo('stylesheet_directory'); ?>/imagens/o-mar-quando-mergulho-capa.jpg" width="100%" height="auto" alt="" />
+						<a style="color:#777"href="http://www.zungueira.com.br/lancamentos/o-mar-e-quando-mergulho-de-negra-anastacia.html">O mar é quando mergulho, de Negra Anastácia</a>
+						<p class="preco-exemplar">R$32,00</p>
+						<a id="botao-comprar" href="http://www.zungueira.com.br/lancamentos/o-mar-e-quando-mergulho-de-negra-anastacia.html">Comprar</a>
 					</div>
 					<!--<div style="border:1px solid #777; width:100%; float:left"></div>-->
 					<div class="exemplar" >
-						<img src="<?php bloginfo('stylesheet_directory'); ?>/imagens/um-travesseiro-para-dois-capa.jpg"  />
-						<p><a style="color:#777"href="http://www.zungueira.com.br/lancamentos/um-travesseiro-para-dois-marcio-rodrigues.html">Um travesseiro para dois, de Márcio Rodrigues</a></p>
-						<p style="margin-top: 10px;">R$32,00</p>
-						<a style="display:block;width:70px; position:absolute;text-decoration:none; color:#777; background:#e1e1e1; border:1px solid #777; text-align:center; bottom:10px; left:40px" href="http://www.zungueira.com.br/lancamentos/um-travesseiro-para-dois-marcio-rodrigues.html">Comprar</a>
+						<img src="<?php bloginfo('stylesheet_directory'); ?>/imagens/um-travesseiro-para-dois-capa.jpg" width="100%" height="auto" alt="" />
+						<a style="color:#777"href="http://www.zungueira.com.br/lancamentos/um-travesseiro-para-dois-marcio-rodrigues.html">Um travesseiro para dois, de Márcio Rodrigues</a>
+						<p class="preco-exemplar">R$32,00</p>
+						<a id="botao-comprar" href="http://www.zungueira.com.br/lancamentos/um-travesseiro-para-dois-marcio-rodrigues.html">Comprar</a>
 					</div>
 					<div class="exemplar" >
-						<img src="<?php bloginfo('stylesheet_directory'); ?>/imagens/ultimo-samba-enredo-capa.jpg"  />
-						<p><a style="color:#777"href="http://www.zungueira.com.br/lancamentos/o-ultimo-samba-enredo-paulo-fabiao.html">O último samba-enredo, de Paulo Fabião</a></p>
-						<p style="margin-top: 10px;">R$32,00</p>
-						<a style="display:block;width:70px; position:absolute;text-decoration:none; color:#777; background:#e1e1e1; border:1px solid #777; text-align:center; bottom:10px; left:40px" href="http://www.zungueira.com.br/lancamentos/o-ultimo-samba-enredo-paulo-fabiao.html">Comprar</a>
+						<img src="<?php bloginfo('stylesheet_directory'); ?>/imagens/ultimo-samba-enredo-capa.jpg" width="100%" height="auto" alt="" />
+						<a style="color:#777"href="http://www.zungueira.com.br/lancamentos/o-ultimo-samba-enredo-paulo-fabiao.html">O último samba-enredo, de Paulo Fabião</a>
+						<p class="preco-exemplar">R$32,00</p>
+						<a id="botao-comprar" href="http://www.zungueira.com.br/lancamentos/o-ultimo-samba-enredo-paulo-fabiao.html">Comprar</a>
 					</div>
 					<div class="exemplar" >
-						<img src="<?php bloginfo('stylesheet_directory'); ?>/imagens/entre-semioticas-capa.jpg"  />
-						<p><a style="color:#777"href="http://www.zungueira.com.br/lancamentos/entre-semioticas.html">Entre-semióticas</a></p>
-						<p style="margin-top: 10px;">R$35,00</p>
-						<a style="display:block;width:70px; position:absolute;text-decoration:none; color:#777; background:#e1e1e1; border:1px solid #777; text-align:center; bottom:10px; left:40px" href="http://www.zungueira.com.br/lancamentos/entre-semioticas.html">Comprar</a>
+						<img src="<?php bloginfo('stylesheet_directory'); ?>/imagens/entre-semioticas-capa.jpg" width="100%" height="auto" alt="" />
+						<a style="color:#777"href="http://www.zungueira.com.br/lancamentos/entre-semioticas.html">Entre-semióticas</a>
+						<p class="preco-exemplar">R$35,00</p>
+						<a id="botao-comprar" href="http://www.zungueira.com.br/lancamentos/entre-semioticas.html">Comprar</a>
 					</div>					
 					<div class="exemplar" >
-						<img src="<?php bloginfo('stylesheet_directory'); ?>/imagens/para-quando-o-entulho-soterrar-os-joelhos-capa.jpg"  />
-						<p><a style="color:#777"href="http://www.zungueira.com.br/lancamentos/para-quando-o-entulho-soterrar-os-joelhos.html">Para Quando o Entulho Soterrar os Joelhos</a></p>
-						<p style="margin-top: 10px;">R$32,00</p>
-						<a style="display:block;width:70px; position:absolute;text-decoration:none; color:#777; background:#e1e1e1; border:1px solid #777; text-align:center; bottom:10px; left:40px" href="http://www.zungueira.com.br/lancamentos/para-quando-o-entulho-soterrar-os-joelhos.html">Comprar</a>
+						<img src="<?php bloginfo('stylesheet_directory'); ?>/imagens/para-quando-o-entulho-soterrar-os-joelhos-capa.jpg" width="100%" height="auto" alt=""  />
+						<a style="color:#777"href="http://www.zungueira.com.br/lancamentos/para-quando-o-entulho-soterrar-os-joelhos.html">Para Quando o Entulho Soterrar os Joelhos</a>
+						<p class="preco-exemplar">R$32,00</p>
+						<a id="botao-comprar" href="http://www.zungueira.com.br/lancamentos/para-quando-o-entulho-soterrar-os-joelhos.html">Comprar</a>
 					</div>
 					<div class="exemplar" >
-						<img src="<?php bloginfo('stylesheet_directory'); ?>/imagens/o-caos-do-acaso-capa.jpg"  />
-						<p><a style="color:#777"href="http://www.zungueira.com.br/lancamentos/o-caos-do-acaso-de-mauro-nunes.html">O Caos do Acaso, de Mauro Nunes</a></p>
-						<p style="margin-top: 10px;">R$35,00</p>
-						<a style="display:block;width:70px; position:absolute;text-decoration:none; color:#777; background:#e1e1e1; border:1px solid #777; text-align:center; bottom:10px; left:40px" href="http://www.zungueira.com.br/lancamentos/o-caos-do-acaso-de-mauro-nunes.html">Comprar</a>
+						<img src="<?php bloginfo('stylesheet_directory'); ?>/imagens/o-caos-do-acaso-capa.jpg" width="100%" height="auto" alt="" />
+						<a style="color:#777"href="http://www.zungueira.com.br/lancamentos/o-caos-do-acaso-de-mauro-nunes.html">O Caos do Acaso, de Mauro Nunes</a>
+						<p class="preco-exemplar">R$35,00</p>
+						<a id="botao-comprar" href="http://www.zungueira.com.br/lancamentos/o-caos-do-acaso-de-mauro-nunes.html">Comprar</a>
 					</div>
 					<div class="exemplar" >
-						<img src="<?php bloginfo('stylesheet_directory'); ?>/imagens/memorias-heliopolis-capa.jpg"  />
-						<p><a style="color:#777"href="http://www.zungueira.com.br/lancamentos/memorias-heliopolis-criacao-coletiva.html">Memórias de Heliópolis</a></p>
-						<p style="margin-top: 10px;">R$23,00</p>
-						<a style="display:block;width:70px; position:absolute;text-decoration:none; color:#777; background:#e1e1e1; border:1px solid #777; text-align:center; bottom:10px; left:40px" href="http://www.zungueira.com.br/lancamentos/memorias-heliopolis-criacao-coletiva.html">Comprar</a>
+						<img src="<?php bloginfo('stylesheet_directory'); ?>/imagens/memorias-heliopolis-capa.jpg" width="100%" height="auto" alt="" />
+						<a style="color:#777"href="http://www.zungueira.com.br/lancamentos/memorias-heliopolis-criacao-coletiva.html">Memórias de Heliópolis</a>
+						<p class="preco-exemplar">R$23,00</p>
+						<a id="botao-comprar" href="http://www.zungueira.com.br/lancamentos/memorias-heliopolis-criacao-coletiva.html">Comprar</a>
 					</div>
 					<div class="exemplar" >
-						<img src="<?php bloginfo('stylesheet_directory'); ?>/imagens/meia-pata-capa.jpg"  />
-						<p><a style="color:#777"href="http://www.zungueira.com.br/lancamentos/meia-pata-ricardo-dantas.html">Meia Pata, de Ricardo Dantas</a></p>
-						<p style="margin-top: 10px;">R$35,00</p>
-						<a style="display:block;width:70px; position:absolute;text-decoration:none; color:#777; background:#e1e1e1; border:1px solid #777; text-align:center; bottom:10px; left:40px" href="http://www.zungueira.com.br/lancamentos/meia-pata-ricardo-dantas.html">Comprar</a>
+						<img src="<?php bloginfo('stylesheet_directory'); ?>/imagens/meia-pata-capa.jpg" width="100%" height="auto" alt="" />
+						<a style="color:#777"href="http://www.zungueira.com.br/lancamentos/meia-pata-ricardo-dantas.html">Meia Pata, de Ricardo Dantas</a>
+						<p class="preco-exemplar">R$35,00</p>
+						<a id="botao-comprar" href="http://www.zungueira.com.br/lancamentos/meia-pata-ricardo-dantas.html">Comprar</a>
 					</div>
 					<div class="exemplar" >
-						<img src="<?php bloginfo('stylesheet_directory'); ?>/imagens/dionisio-kore-capa.jpg"  />
-						<p><a style="color:#777"href="http://www.zungueira.com.br/lancamentos/dionisio-kore-marcelo-marcus-fonseca.html">De Dionísio para Koré, de Marcelo Marcus Fonseca</a></p>
-						<p style="margin-top: 10px;">R$99,90</p>
-						<a style="display:block;width:70px; position:absolute;text-decoration:none; color:#777; background:#e1e1e1; border:1px solid #777; text-align:center; bottom:10px; left:40px" href="http://www.zungueira.com.br/lancamentos/dionisio-kore-marcelo-marcus-fonseca.html">Comprar</a>
+						<img src="<?php bloginfo('stylesheet_directory'); ?>/imagens/dionisio-kore-capa.jpg" width="100%" height="auto" alt="" />
+						<a style="color:#777"href="http://www.zungueira.com.br/lancamentos/dionisio-kore-marcelo-marcus-fonseca.html">De Dionísio para Koré, de Marcelo Marcus Fonseca</a>
+						<p class="preco-exemplar">R$99,90</p>
+						<a id="botao-comprar" href="http://www.zungueira.com.br/lancamentos/dionisio-kore-marcelo-marcus-fonseca.html">Comprar</a>
 					</div>
 					<div class="exemplar" >
-						<img src="<?php bloginfo('stylesheet_directory'); ?>/imagens/no-diva-do-palhaco-capa.jpg"  />
-						<p><a style="color:#777"href="http://www.zungueira.com.br/no-diva-palhaco-carlos-biaggioli.html">No divã do palhaço, de Carlos Biaggioli</a></p>
-						<p style="margin-top: 10px;">R$32,00</p>
-						<a style="display:block;width:70px; position:absolute;text-decoration:none; color:#777; background:#e1e1e1; border:1px solid #777; text-align:center; bottom:10px; left:40px" href="http://www.zungueira.com.br/no-diva-palhaco-carlos-biaggioli.html">Comprar</a>
+						<img src="<?php bloginfo('stylesheet_directory'); ?>/imagens/no-diva-do-palhaco-capa.jpg" width="100%" height="auto" alt="" />
+						<a style="color:#777"href="http://www.zungueira.com.br/no-diva-palhaco-carlos-biaggioli.html">No divã do palhaço, de Carlos Biaggioli</a>
+						<p class="preco-exemplar">R$32,00</p>
+						<a id="botao-comprar" href="http://www.zungueira.com.br/no-diva-palhaco-carlos-biaggioli.html">Comprar</a>
 					</div>
 				</div>	
-				<a href="#">
+				<a id="botao-de-baixo-loja" href="http://www.zungueira.com.br/" target="_blank">
 			<img src="<?php bloginfo('stylesheet_directory'); ?>/imagens/rodape-loja.jpg" width="100%" height="auto" alt="" />
 				</a>
 		</div> <!-- #content .esquerda-home -->
@@ -146,6 +146,8 @@ get_header(); ?>
 
 		<div id="content" class="direita-home" role="main">
 			<?php get_sidebar('front'); ?>
+		<p></p>
+		<div class="fb-like-box" data-href="https://www.facebook.com/editorakazua" data-width="350" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div>
 
 		</div><!-- #content .direita-home -->
 

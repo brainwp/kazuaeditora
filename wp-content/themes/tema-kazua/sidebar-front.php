@@ -36,12 +36,12 @@ if ( ! is_active_sidebar( 'sidebar-2' ) )
                 </div>
                 <?php } ?>
 
-				<div id="post-titulo">
-					<h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
+				<div class="post-titulo">
+					<a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
 				</div>
 
 				<div class="entry-data">
-					<?php twentytwelve_entry_meta(); ?>
+					Publicação: <?php the_time('d/m/Y'); ?>
 				</div><!-- .entry-data -->
         </div><!-- #cada-post -->
 
@@ -57,8 +57,7 @@ if ( ! is_active_sidebar( 'sidebar-2' ) )
 		<?php // dynamic_sidebar( 'sidebar-2' ); ?>
 	</div> .first -->
 	<?php // endif; ?>
-
-		<a href="#">
+		<a id="botao-de-baixo-blog" href="<?php echo esc_url( home_url( '/blog' ) ); ?>" target="_blank">
 	<img src="<?php bloginfo('stylesheet_directory'); ?>/imagens/rodape-blog.jpg" width="100%" height="auto" alt="" />
 		</a>
 </div><!-- #secondary -->
