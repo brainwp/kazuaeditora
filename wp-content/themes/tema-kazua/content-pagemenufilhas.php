@@ -16,6 +16,19 @@
 			<h1 class="entry-title"><?php the_title(); ?></h1>
 		</header>
 
+	   <div id="single-navigation">
+		<?php
+		  if( $post->post_parent )
+		  $children = wp_list_pages( "post_type=page&title_li=&child_of=".$post->post_parent."&echo=0" );
+		  else
+		  $children = wp_list_pages( "post_type=page&title_li=&child_of=".$post->ID."&echo=0" );
+		  if ( $children ) { ?>
+		  <ul>
+		  <?php echo $children; ?>
+		  </ul>
+		<?php } ?>
+		</div>
+
 		<div class="entry-content">
 			<?php the_content(); ?>
 			<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'twentytwelve' ), 'after' => '</div>' ) ); ?>
