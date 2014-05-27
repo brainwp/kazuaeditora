@@ -61,14 +61,13 @@
 
 				<div id="header-content-terceiro">
 
-				<a class="header-button-seja-autor" href="<?php echo esc_url( home_url( '/seja-autor' ) ); ?>">
+				<a class="header-button-seja-autor" href="<?php echo esc_url( home_url( '/envie-o-seu-original' ) ); ?>">
 				Botão Seja Autor
 				</a>
-				<a class="footer-button-seja-autor" href="<?php echo esc_url( home_url( '/seja-autor' ) ); ?>">
+				<a class="footer-button-seja-autor" href="<?php echo esc_url( home_url( '/envie-o-seu-original' ) ); ?>">
 				<img src="<?php bloginfo('stylesheet_directory'); ?>/imagens/envie-seu-original.jpg" width="100%" height="auto" alt="" />
 				</a>
 				</div>
-
 		</hgroup>
 
 		<?php if ( get_header_image() ) : ?>

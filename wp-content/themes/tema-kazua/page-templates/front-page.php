@@ -15,7 +15,7 @@ get_header(); ?>
 	<div id="primary" class="site-content">
 		
 		<div id="header-negra-anastacia">
-			<a href="<?php echo esc_url( home_url( '/novos-autores' ) ); ?>">
+			<a href="<?php echo esc_url( home_url( '/espaco-negra-anastacia-de-novos-autores' ) ); ?>">
 			<div class="imagem-destaque">
 				<img src="<?php bloginfo('stylesheet_directory'); ?>/imagens/logo-negra-anastacia-final.gif" width="100%" height="auto" alt="" />
 			</div>
@@ -26,7 +26,7 @@ get_header(); ?>
 		</div>
 
 		<div id="header-zungueira">
-		<a href="<?php echo esc_url( home_url( '/zungueira-distribuidora' ) ); ?>">
+		<a href="<?php echo esc_url( home_url( '/zungueira-da-kazua-distribuidora-e-divulgadora' ) ); ?>">
 			<div class="imagem-destaque">
 				<img src="<?php bloginfo('stylesheet_directory'); ?>/imagens/logo-zungueira.jpg" width="100%" height="auto" alt="" />
 		
