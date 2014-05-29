@@ -10,6 +10,17 @@
 
 add_filter('show_admin_bar', '__return_false'); 
 
+// Função para usar o Thickbox nativo do WP no tema Portfolio Brasa
+function add_themescript(){
+    if(!is_admin()){
+    wp_enqueue_script('jquery');
+    wp_enqueue_script('thickbox',null,array('jquery'));
+    wp_enqueue_style('thickbox.css', '/'.WPINC.'/js/thickbox/thickbox.css', null, '1.0');
+    }
+}
+add_action('init','add_themescript');
+
+
 /*
  * Loads the Options Panel
  *

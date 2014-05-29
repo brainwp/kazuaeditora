@@ -513,6 +513,38 @@ h1{
 
 }
 
+#TB_window {
+    background: none repeat scroll 0 0 #333;
+	padding-top: 20px;
+}
+
+#TB_window img#TB_Image {
+    border-right: none;
+    border-style: none;
+    border-width: none;
+    display: block;
+    margin: 15px 0 0 15px;
+}
+
+.tb-close-icon {
+    color: #FFF;
+    height: 29px;
+    right: 0;
+    text-align: center;
+    width: 29px;
+}
+
+.tb-close-icon:hover {
+    color: #DDD;
+}
+
+.tb-close-icon:before {
+    content: "X";
+	font-family: inherit;
+	text-decoration: none;
+	font-weight: bold;
+}
+
 
 .addw2p li{
 
