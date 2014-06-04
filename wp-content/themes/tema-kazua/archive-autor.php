@@ -12,7 +12,7 @@
 get_header(); ?>
 
 	<section id="primary" class="site-content">
-		<div id="content" role="main">
+		<div id="content" class="archive-autor" role="main">
 		<?php if ( have_posts() ) : ?>
 						<?php
 			/* Start the Loop */
