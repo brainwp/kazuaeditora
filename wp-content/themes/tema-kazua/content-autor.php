@@ -18,11 +18,8 @@
 		<?php endif; ?>
 		<header class="entry-header">
 			
-			<?php if ( is_single() ) : ?>
-			<h1 class="entry-title"><?php the_title(); ?></h1>
-				<div class="entry-data single">
-					<?php the_time('d/m/Y'); ?>
-				</div><!-- .entry-data -->
+			<?php if ( is_singular( 'autor' ) ) : ?>
+				<h1 class="entry-title"><?php the_title(); ?></h1>
 			<?php else : ?>
 			<h1 class="entry-title">
 				<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
@@ -33,7 +30,6 @@
 				the_post_thumbnail();
 			endif; ?>
 			</a>
-			ESTOU AQUI
 		</header><!-- .entry-header -->
 
 		<?php if ( is_search() ) : // Only display Excerpts for Search ?>
