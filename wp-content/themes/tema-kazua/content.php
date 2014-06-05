@@ -33,7 +33,6 @@
 				the_post_thumbnail();
 			endif; ?>
 			</a>
-			ESTOU AQUI
 		</header><!-- .entry-header -->
 
 		<?php if ( is_search() ) : // Only display Excerpts for Search ?>

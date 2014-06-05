@@ -10,12 +10,13 @@
  */
 ?>
 	</div><!-- #main .wrapper -->
+	</div><!-- #page -->
 	<footer id="colophon" role="contentinfo">
 		<div class="site-info">
 				<img src="<?php bloginfo('stylesheet_directory'); ?>/imagens/rodape-geral.jpg" width="100%" height="auto" alt="" />
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
-</div><!-- #page -->
+
 
 <?php wp_footer(); ?>
 </body>

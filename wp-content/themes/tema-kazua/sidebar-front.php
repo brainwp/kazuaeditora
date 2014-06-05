@@ -20,8 +20,11 @@ if ( ! is_active_sidebar( 'sidebar-2' ) )
 
 // If we get this far, we have widgets. Let do this.
 ?>
+	<a href="<?php echo esc_url( home_url( '/blog' ) ); ?>">
 	<img src="<?php bloginfo('stylesheet_directory'); ?>/imagens/BLOG.jpg" width="100%" height="auto" alt="" />
+	</a>
 	<div class="posts-query-home">
+
 		 <!-- Inicio Loop -->
       	<?php
 		if ( query_posts( array ( 'post_type'=>'post', 'post_status' => 'publish', 'posts_per_page' => 3 )) ) while ( have_posts() ) : the_post(); 
