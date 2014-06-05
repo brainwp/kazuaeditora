@@ -45,5 +45,7 @@ get_header(); ?>
 		</div><!-- #content -->
 	</section><!-- #primary -->
 
-<?php get_sidebar(); ?>
+	<div id="secondary" class="widget-area" role="complementary">
+		<?php get_sidebar('interno'); ?>
+	</div>
 <?php get_footer(); ?>
