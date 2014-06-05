@@ -16,7 +16,13 @@
 			<h1 class="entry-title"><?php the_title(); ?></h1>
 		</header>
 
-	   <div id="single-navigation">
+
+		<div class="entry-content">
+			<?php the_content(); ?>
+			<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'twentytwelve' ), 'after' => '</div>' ) ); ?>
+		</div><!-- .entry-content -->
+
+   <div id="single-navigation">
 		<?php
 		  if( $post->post_parent )
 		  $children = wp_list_pages( "post_type=page&title_li=&child_of=".$post->post_parent."&echo=0" );
@@ -29,10 +35,6 @@
 		<?php } ?>
 		</div>
 
-		<div class="entry-content">
-			<?php the_content(); ?>
-			<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'twentytwelve' ), 'after' => '</div>' ) ); ?>
-		</div><!-- .entry-content -->
 		<footer class="entry-meta">
 			<?php edit_post_link( __( 'Edit', 'twentytwelve' ), '<span class="edit-link">', '</span>' ); ?>
 		</footer><!-- .entry-meta -->
