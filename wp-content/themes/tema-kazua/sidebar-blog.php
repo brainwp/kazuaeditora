@@ -10,11 +10,16 @@
  */
 ?>
 
-	<?php if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
-		<div id="secondary" class="widget-area" role="complementary">
-			<?php dynamic_sidebar( 'sidebar-2' ); ?>
+	<a href="<?php echo esc_url( home_url( '/blog' ) ); ?>">
+	<img src="<?php bloginfo('stylesheet_directory'); ?>/imagens/BLOG.jpg" width="100%" height="auto" alt="" />
+	</a>
+	<div class="posts-query-home">
+			<?php if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
+			<div class="widget-area-blog" role="complementary">
+				<?php dynamic_sidebar( 'sidebar-2' ); ?>
+			</div><!-- .widget-area-blog -->
+		<?php endif; ?>
+	</div><!-- Post Query HOme -->
 
-		</div><!-- #secondary -->
-	<?php endif; ?>
 
 

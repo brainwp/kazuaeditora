@@ -71,13 +71,14 @@ a.header-button-seja-autor:hover {
 }
 
 a.footer-button-seja-autor {
-
-
+    width: 163px;
+	height: 30px;
+	text-indent: -9999px;
 }
 
 .main-navigation {
     margin-bottom: 1em;
-	margin-top: 1em;
+	margin-top: 0.5em;
 }
 
 #header-zungueira {
@@ -306,7 +307,56 @@ body {
 
 }
 
+.main-navigation ul.nav-menu {
+    width: 100%;
+	border: none;
+	margin-left: 5px;
+}
 
+.main-navigation div.nav-menu > ul {
+	border: none;
+	text-align: left;
+    width: auto;
+}
+
+.main-navigation li {
+    margin: 0 -3px 0 0;
+}
+
+.main-navigation li a {
+    border-bottom: 0 none;
+    color: #000;
+    line-height: 2;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.main-navigation li a img{
+	max-width: auto;
+	width: 100%;
+	margin-right: -2px;
+}
+
+
+.main-navigation li ul li a {
+	background: #FFF;
+	border-bottom: none;
+	padding: 0;
+	width: auto;
+}
+
+.main-navigation li ul li a:hover {
+	background: #FFF;
+}
+
+.main-navigation li ul li a img{
+	max-width: auto;
+	width: 100%;
+}
+
+.main-navigation li ul.sub-menu {
+	width: auto;
+}
 
 /* menu - subniveis*/
 
@@ -619,12 +669,13 @@ element.style {
 
 
 .singular #primary {
-
 	margin-top:-50px;
 	margin-bottom:20px;
-
 	}
 
+.widget-area-blog {
+	padding: 20px; 
+}
 
 img[class*="align"], img[class*="wp-image-"], #content .gallery .gallery-icon img {
 

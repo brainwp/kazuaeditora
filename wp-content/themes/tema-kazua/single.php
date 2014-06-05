@@ -28,6 +28,7 @@ get_header(); ?>
 
 		</div><!-- #content -->
 	</div><!-- #primary -->
-
-<?php get_sidebar('blog'); ?>
+	<div id="secondary" class="widget-area" role="complementary">
+	<?php get_sidebar('blog'); ?>
+	</div>
 <?php get_footer(); ?>

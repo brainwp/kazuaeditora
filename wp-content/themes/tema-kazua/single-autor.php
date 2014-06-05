@@ -27,6 +27,7 @@ get_header(); ?>
 
 		</div><!-- #content -->
 	</div><!-- #primary -->
-
-<?php get_sidebar('autores'); ?>
+	<div id="secondary" class="widget-area" role="complementary">
+		<?php get_sidebar('interno'); ?>
+	</div>
 <?php get_footer(); ?>

@@ -25,6 +25,6 @@ get_header(); ?>
 		</div><!-- #content -->
 	</div><!-- #primary -->
 	<div id="secondary" class="widget-area" role="complementary">
-		<?php get_sidebar('front'); ?>
+		<?php get_sidebar('interno'); ?>
 	</div>
 <?php get_footer(); ?>

@@ -62,10 +62,10 @@
 				<div id="header-content-terceiro">
 
 				<a class="header-button-seja-autor" href="<?php echo esc_url( home_url( '/envie-o-seu-original' ) ); ?>">
-				Botão Seja Autor
+				Seja Autor
 				</a>
 				<a class="footer-button-seja-autor" href="<?php echo esc_url( home_url( '/envie-o-seu-original' ) ); ?>">
-				<img src="<?php bloginfo('stylesheet_directory'); ?>/imagens/envie-seu-original.jpg" width="100%" height="auto" alt="" />
+					<img src="<?php bloginfo('stylesheet_directory'); ?>/imagens/envie-seu-original.jpg" width="100%" height="auto" alt="Envie seu original" />
 				</a>
 				</div>
 		</hgroup>
