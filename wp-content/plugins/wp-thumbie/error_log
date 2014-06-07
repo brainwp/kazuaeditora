@@ -1,1 +1,0 @@
-[17-Sep-2013 01:33:02] PHP Warning:  fopen(./cache/timthumb_int_8072065994fbb8a0cca005cd8692574e.timthumb.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/edito253/public_html/wp-content/plugins/wp-thumbie/timthumb.php on line 1020

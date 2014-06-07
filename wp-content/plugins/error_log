@@ -1,2 +1,0 @@
-[17-Apr-2014 00:50:38] PHP Fatal error:  Call to undefined function  add_action() in /home/edito253/public_html/wp-content/plugins/hello.php on line 60
-[19-Apr-2014 00:36:25] PHP Fatal error:  Call to undefined function  add_action() in /home/edito253/public_html/wp-content/plugins/hello.php on line 60
