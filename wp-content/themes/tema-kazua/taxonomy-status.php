@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying Archive Autor pages
+ * The template for displaying Archive Autor Pages
  *
  * Used to display archive-type pages if nothing more specific matches a query.
  *
@@ -22,33 +22,20 @@ get_header(); ?>
 				<div class="archive-meta"><?php echo category_description(); ?></div>
 			<?php endif; ?>
 
-		<?php 
+		<?php global $query_string;
+		query_posts( $query_string . '&order=ASC&posts_per_page=-1&orderby=name' );
 		if ( have_posts() ) : ?>
 						<?php
 			/* Start the Loop */
 			while ( have_posts() ) : the_post(); ?>
 
-	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-		<header class="entry-header">
-
-<div class="author-archive-avatar"><img src="<?php the_field('autorimage'); ?>" alt="" width="auto" /></div>
-		
-			<h1 class="entry-title">
-				<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
-			</h1>
-		</header><!-- .entry-header -->
-		<div class="entry-content">
-
-		<div class="entry-summary">
-			<?php the_excerpt(); ?>
-		</div><!-- .entry-summary -->
-		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'twentytwelve' ), 'after' => '</div>' ) ); ?>
-		</div><!-- .entry-content -->
-
+		<article id="post-<?php the_ID(); ?>" class="author-archive-avatar" style="background:url(<?php the_field('autorimage'); ?>) no-repeat scroll center top;">
+			<a href="<?php the_permalink(); ?>"  rel="bookmark" alt="<?php the_title(); ?>">
+				<div class="autor-moldura"><span><?php the_title(); ?></span>
+				</div>
+			</a>
 		</article><!-- #post -->
-
-			<?php endwhile;?>
+				<?php endwhile;?>
 		<?php endif; ?>
 		</div><!-- #content -->
 	</section><!-- #primary -->

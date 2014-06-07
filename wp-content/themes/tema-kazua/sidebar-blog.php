@@ -11,7 +11,7 @@
 ?>
 
 	<a href="<?php echo esc_url( home_url( '/blog' ) ); ?>">
-	<img src="<?php bloginfo('stylesheet_directory'); ?>/imagens/BLOG.jpg" width="100%" height="auto" alt="" />
+	<img src="<?php bloginfo('stylesheet_directory'); ?>/imagens/entrelinhas.jpg" width="100%" height="auto" alt="" />
 	</a>
 	<div class="posts-query-home">
 			<?php if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
