@@ -252,6 +252,74 @@ body {
     width: 34%;
 }
 
+.author-single-avatar {
+	display: table;
+    margin: 150px 0 0 15px;
+    position: absolute;
+	width: 150px;
+	height: 150px;
+	background: none repeat scroll 0 0 #000000;
+    border: 1px solid #000000;
+    border-radius: 4px 5px;
+    padding: 2px;
+}
+
+#image-header-autor {
+	max-height: 220px;
+	overflow: hidden;
+    margin-top: 15px;
+}
+
+#image-header-autor img.wp-post-image {
+	width: 100%;
+}
+
+
+#menu-botoes-autor {
+	float: left;
+    margin: 20px 10px 30px 180px;
+    width: 440px;
+}
+
+a.btn-kamaradagem {
+	background: url("imagens/botao_kamaradagem_autor.jpg") no-repeat scroll center top;
+	display: block;
+	width: 150px;
+	height: 45px;
+	text-indent: -9999px;
+	float: left;
+}
+
+a.btn-acoes {
+	background: url("imagens/botao_acao_divulgacao.jpg") no-repeat scroll center top;
+	display: block;
+	width: 150px;
+	height: 45px;
+	text-indent: -9999px;
+	float: left;
+}
+
+
+a.btn-blog-autor {
+	background: url("imagens/botao_blog_autor.jpg") no-repeat scroll center top;
+	display: block;
+	width: 150px;
+	height: 45px;
+	text-indent: -9999px;
+	float: left;
+}
+
+
+a.btn-compre {
+	background: url("imagens/botao_compre.jpg") no-repeat scroll center top;
+	display: block;
+	width: 150px;
+	height: 45px;
+	text-indent: -9999px;
+	float: left;
+}
+
+
 #single-navigation {
     clear: both;
     display: block;
@@ -747,4 +815,8 @@ p.catalogoautor{
 	width:38%;
 }
 
+
+img#wpstats {
+    display: none;
+}
 

@@ -15,20 +15,14 @@ get_header(); ?>
 		<div id="content" class="archive-autor" role="main">
 
 			<h1 class="entry-title">
-			<p>AUTORES</p>
+			<?php single_cat_title( '', true ); ?>
 			</h1>
 
 			<?php if ( category_description() ) : // Show an optional category description ?>
 				<div class="archive-meta"><?php echo category_description(); ?></div>
 			<?php endif; ?>
 
-		<?php query_posts(array(
-	'posts_per_page'   => -1,
-	'orderby'          => 'name',
-	'order'            => 'DESC',
-	'post_type'        => 'autor',
-	'post_status'      => 'publish',));
-
+		<?php 
 		if ( have_posts() ) : ?>
 						<?php
 			/* Start the Loop */

@@ -21,36 +21,38 @@
 				<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
 			</h1>
 			<?php endif; // is_single() ?>
-			<a class="thickbox image" 			href="<?php $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 720,405 ), false, '' );echo $src[0];?>">
+			<div class="author-single-avatar"><img src="<?php the_field('autorimage'); ?>" alt="" width="auto" /></div>
+			<div id="image-header-autor">
 			<?php if ( ! post_password_required() && ! is_attachment() ) :
 				the_post_thumbnail();
 			endif; ?>
-			</a>
-			<div class="author-single-avatar"><img src="<?php the_field('autorimage'); ?>" alt="" width="auto" /></div>
-			<?php
-			if(get_field('kamaradagem_do_autor'))
-			{
-				echo '<a class="btn-autores href="' . get_field('kamaradagem_do_autor') . '">Kamaradagem do Autor</a>';
-			}
-			?>			
-			<?php
-			if(get_field('acoes_de_divulgacao'))
-			{
-				echo '<a class="btn-autores href="' . get_field('acoes_de_divulgacao') . '">Acoes de Divulgacao</a>';
-			}
-			?>	
-			<?php
-			if(get_field('blog_do_autor'))
-			{
-				echo '<a class="btn-autores href="' . get_field('blog_do_autor') . '">Blog do Autor</a>';
-			}
-			?>	
-			<?php
-			if(get_field('compre'))
-			{
-				echo '<a class="btn-autores href="' . get_field('compre') . '">Compre</a>';
-			}
-			?>	
+			</div>
+			<div id="menu-botoes-autor">
+				<?php
+				if(get_field('kamaradagem_do_autor'))
+				{
+					echo '<a class="btn-kamaradagem" href="' . get_field('kamaradagem_do_autor') . '">Kamaradagem do Autor</a>';
+				}
+				?>			
+				<?php
+				if(get_field('acoes_de_divulgacao'))
+				{
+					echo '<a class="btn-acoes" href="' . get_field('acoes_de_divulgacao') . '">Acoes de Divulgacao</a>';
+				}
+				?>	
+				<?php
+				if(get_field('blog_do_autor'))
+				{
+					echo '<a class="btn-blog-autor" href="' . get_field('blog_do_autor') . '">Blog do Autor</a>';
+				}
+				?>	
+				<?php
+				if(get_field('compre'))
+				{
+					echo '<a class="btn-compre" href="' . get_field('compre') . '">Compre</a>';
+				}
+				?>
+			</div>
 		</header><!-- .entry-header -->
 
 		<?php if ( is_search() ) : // Only display Excerpts for Search ?>
