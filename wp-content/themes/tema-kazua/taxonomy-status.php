@@ -13,11 +13,11 @@ get_header(); ?>
 
 	<section id="primary" class="site-content">
 		<div id="content" class="archive-autor" role="main">
-
+			<header class="entry-header">
 			<h1 class="entry-title">
 			<?php single_cat_title( '', true ); ?>
 			</h1>
-
+			</header>
 			<?php if ( category_description() ) : // Show an optional category description ?>
 				<div class="archive-meta"><?php echo category_description(); ?></div>
 			<?php endif; ?>

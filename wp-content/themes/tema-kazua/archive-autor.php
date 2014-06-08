@@ -40,9 +40,9 @@ get_header(); ?>
 
 <div class="author-archive-avatar"><img src="<?php the_field('autorimage'); ?>" alt="" width="auto" /></div>
 		
-			<h1 class="entry-title">
+			<h3 class="entry-title">
 				<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
-			</h1>
+			</h3>
 		</header><!-- .entry-header -->
 		<div class="entry-content">
 

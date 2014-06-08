@@ -224,11 +224,15 @@ body {
 .site-content {
     margin: 1em 0 0;
     float: left;
-    width: 62%;
+    width: 64%;
 }
 
 .site-content article {
-    margin-left: 13px;
+    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.6);
+    border-bottom: 0 none;
+    margin-left: 5px;
+    padding: 10px;
+	margin-bottom: 20px;
 }
 
 .archive-autor .type-autor {
@@ -238,6 +242,7 @@ body {
 	margin-left:0;
     margin-bottom: 0;
     max-height: 150px;
+	width: 150px;
     overflow: hidden;
     padding-bottom: 1em;
     word-wrap: break-word;
@@ -550,15 +555,15 @@ img.alignleft, img.alignright, img.aligncenter {
 
 .entry-data {
 	text-align: right;
-	color: #000000;
+	color: #333333;
     font-size: 0.8em;
     text-shadow: 2px 2px #FFFFFF;
 	margin: 0 5px 0 0;
 	padding-bottom: 5px;
 }
 
-.entry-data .single {
-	color: #000000;
+.entry-data-single {
+	color: #333333;
     font-size: 1.2em;
     font-style: italic;
     font-weight: bold;
@@ -567,6 +572,7 @@ img.alignleft, img.alignright, img.aligncenter {
     text-align: left;
     text-shadow: 2px 2px #FFFFFF;
 }
+
 #botao-de-baixo-loja {
  	clear: both;
     display: block;
@@ -611,7 +617,7 @@ p {
 h1{
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 	font-size: 20px;
-	color: #666;
+	color: #333333;
 	line-height: 100%;
 }
 
@@ -785,7 +791,6 @@ element.style {
 }
 
 
-
 .singular #primary {
 	margin-top:-50px;
 	margin-bottom:20px;
@@ -794,6 +799,27 @@ element.style {
 .widget-area-blog {
 	padding: 20px;
 	margin-left: 10px;
+}
+
+.widget_nav_menu {
+	margin-bottom: 0;
+}
+
+#nav_menu-2 {
+	margin-bottom: 0;
+}
+
+.widget-area .widget h3 {
+    margin-bottom: 1em;
+    background:url("imagens/blog_cat_autores.jpg") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+	width: 280px;
+	height: 40px;
+	text-indent: -9999px;
+}
+
+.site-content .fundo-blog {
+    background: url("imagens/fundo_blog_01.jpg") repeat scroll 0 0 / 100% auto rgba(0, 0, 0, 0);
+    padding: 15px;
 }
 
 img[class*="align"], img[class*="wp-image-"], #content .gallery .gallery-icon img {
@@ -811,6 +837,50 @@ img[class*="align"], img[class*="wp-image-"], #content .gallery .gallery-icon im
 #comments-title {
    line-height:4.6em;
 
+}
+
+#comments {
+    background: none repeat scroll 0 0 rgba(200, 200, 200, 0.6);
+    border-bottom: 0 none;
+    padding: 15px;
+	margin-left: 5px;
+
+}
+
+#respond {
+    margin-top: 1em;
+}
+
+
+.nav-previous, .previous-image {
+	background: url("imagens/flecha-anterior-menor.png") no-repeat scroll top left rgba(0, 0, 0, 0);
+    float: left;
+    width: 50%;
+	height: 30px;
+}
+
+.nav-next, .next-image {
+	background: url("imagens/flecha-proxima-menor.png") no-repeat scroll top right rgba(0, 0, 0, 0);
+    float: right;
+    text-align: right;
+    width: 50%;
+	height: 30px;
+}
+
+.nav-previous a {
+  display: block;
+    text-indent: -99999px;
+}
+
+.nav-next a {
+    display: block;
+    text-indent: -99999px;
+    text-align: left;
+}
+
+
+#respond form p.form-allowed-tags {
+		display: none;
 }
 
 #access ul {
@@ -869,3 +939,18 @@ img#wpstats {
     display: none;
 }
 
+.jj-nav-post {
+    height: 64px;
+    margin: auto;
+    position: fixed;
+    width: 250px;
+    z-index: 3000;
+}
+
+#jj-prev-post {
+background: url("imagens/flecha-anterior-menor.png") no-repeat scroll left top rgba(0, 0, 0, 0);
+}
+
+#jj-next-post {
+ background: url("imagens/flecha-proxima-menor.png") no-repeat scroll right top rgba(0, 0, 0, 0);
+}
