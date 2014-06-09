@@ -58,7 +58,17 @@
 
 	    <!-- Fim Loop -->
 	
-		<a id="botao-de-baixo-blog" href="<?php echo esc_url( home_url( '/blog' ) ); ?>" target="_self">
-	<img src="<?php bloginfo('stylesheet_directory'); ?>/imagens/rodape-blog.jpg" width="100%" height="auto" alt="" />
-		</a>
+		<!-- Novo Loop -->
+		<?php
+		// The Query
+		query_posts( 'posts_per_page=1' );
+		// The Loop
+			while ( have_posts() ) : the_post(); ?>
+			<a id="botao-de-baixo-blog" href="<?php the_permalink(); ?>"  rel="bookmark" alt="<?php the_title(); ?>" target="_self">		
+				<img src="<?php bloginfo('stylesheet_directory'); ?>/imagens/rodape-blog.jpg" width="100%" height="auto" alt="" />
+			</a>
+		<?php endwhile;?>
+		<?php // Reset Query
+		wp_reset_query();
+		?>
 

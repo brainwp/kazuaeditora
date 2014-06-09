@@ -1,15 +1,9 @@
 <?php
 /**
- * The template for displaying all pages
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site will use a
- * different template.
- *
  * @package WordPress
  * @subpackage Twenty_Twelve
  * @since Twenty Twelve 1.0
+ * Template name: Seja Autor
  */
 
 get_header(); ?>
@@ -19,8 +13,11 @@ get_header(); ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
 				<?php get_template_part( 'content', 'page' ); ?>
-
-
+				<nav id="site-navigation" class="main-navigation" role="navigation">
+					<?php wp_nav_menu( array( 'menu' => 'seja-autor', 'menu_class' => 'nav-menu-internas' ) ); ?>
+				</nav><!-- #site-navigation -->
+					<img src="<?php bloginfo('stylesheet_directory'); ?>/imagens/botao-espaco-negra-anastacia.jpg">
+					<img src="<?php bloginfo('stylesheet_directory'); ?>/imagens/sj_orig.jpg" width="100%" height="auto" alt="" />
 				<?php if ( have_comments() ) : ?>
 					<?php comments_template( '', true ); ?>
 				<?php else : // or, if we don't have comments:
@@ -28,8 +25,6 @@ get_header(); ?>
 						<p class="nocomments"></p>
 					<?php endif; // end ! comments_open() ?>
 				<?php endif; // end have_comments() ?>
-
-				
 			<?php endwhile; // end of the loop. ?>
 
 		</div><!-- #content -->

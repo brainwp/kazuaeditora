@@ -68,11 +68,19 @@ if ( ! is_active_sidebar( 'sidebar-2' ) )
 		</div><!-- Post Query HOme -->
 
 	    <!-- Fim Loop -->
-	
-		<a id="botao-de-baixo-blog" href="<?php echo esc_url( home_url( '/blog' ) ); ?>" target="_self">
-	<img src="<?php bloginfo('stylesheet_directory'); ?>/imagens/rodape-blog.jpg" width="100%" height="auto" alt="" />
-		</a>
-
+		<!-- Novo Loop -->
+		<?php
+		// The Query
+		query_posts( 'posts_per_page=1' );
+		// The Loop
+			while ( have_posts() ) : the_post(); ?>
+			<a id="botao-de-baixo-blog" href="<?php the_permalink(); ?>"  rel="bookmark" alt="<?php the_title(); ?>" target="_self">		
+				<img src="<?php bloginfo('stylesheet_directory'); ?>/imagens/rodape-blog.jpg" width="100%" height="auto" alt="" />
+			</a>
+		<?php endwhile;?>
+		<?php // Reset Query
+		wp_reset_query();
+		?>
 		<div class="fb-like-box" data-href="https://www.facebook.com/editorakazua" data-width="350" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true">
 		</div>
 

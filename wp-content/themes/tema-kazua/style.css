@@ -224,7 +224,7 @@ body {
 .site-content {
     margin: 1em 0 0;
     float: left;
-    width: 64%;
+    width: 65%;
 }
 
 .site-content article {
@@ -936,6 +936,20 @@ p.catalogoautor{
 	float:left;
 	position:relative;
 	width:38%;
+}
+
+.nav-menu-internas {
+	height: auto;
+}
+
+.main-navigation ul.nav-menu-internas {
+    border: medium none;
+    margin-left: 0;
+    width: 100%;
+}
+
+.site-content nav {
+	overflow: visible;
 }
 
 

@@ -22,55 +22,18 @@ add_action('init','add_themescript');
 
 
 /*
- * Loads the Options Panel
- *
- * If you're loading from a child theme use stylesheet_directory
- * instead of template_directory
+ * Load new Menus
  */
+function temazakua_setup() {
+	register_nav_menu( 'trabalhe-conosco', __( 'Trabalhe Conosco', 'twentytwelve' ) );
+	register_nav_menu( 'espaco-negra-anastacia', __( 'Espaço Negra Anastácia de Novos Autores', 'twentytwelve' ) );
+	register_nav_menu( 'zungueira-da-kazua', __( 'Zungueira da Kazuá', 'twentytwelve' ) );
+	register_nav_menu( 'estudos-academicos', __( 'Estudos Acadêmicos', 'twentytwelve' ) );
+	register_nav_menu( 'seja-autor', __( 'Seja Autor', 'twentytwelve' ) );
+	register_nav_menu( 'artistas-convidados', __( 'Artistas Convidados', 'twentytwelve' ) );
+	register_nav_menu( 'kazua-das-artes', __( 'Kazuá das Artes', 'twentytwelve' ) );
 
-define( 'OPTIONS_FRAMEWORK_DIRECTORY', get_template_directory_uri() . '/inc/options-framework/inc/' );
-require_once dirname( __FILE__ ) . '/inc/options-framework/inc/options-framework.php';
-
-/*
- * This is an example of how to add custom scripts to the options panel.
- * This one shows/hides the an option when a checkbox is clicked.
- *
- * You can delete it if you not using that option
- */
-
-add_action( 'optionsframework_custom_scripts', 'optionsframework_custom_scripts' );
-
-function optionsframework_custom_scripts() { ?>
-
-<script type="text/javascript">
-jQuery(document).ready(function() {
-
-	jQuery('#example_showhidden').click(function() {
-  		jQuery('#section-example_text_hidden').fadeToggle(400);
-	});
-
-	if (jQuery('#example_showhidden:checked').val() !== undefined) {
-		jQuery('#section-example_text_hidden').show();
-	}
-
-});
-</script>
-
-<?php
-
-}
-
-include ( dirname( __FILE__ ) . "/options.php" );
-
-
-/**
- * Enqueue scripts and styles.
-
-function kazua_scripts() {
-	wp_enqueue_style( 'temporario-style',  get_template_directory_uri() . '/temporario.css' );
-}
-add_action( 'wp_enqueue_scripts', 'kazua_scripts' );
- **/
+}add_action( 'after_setup_theme', 'temazakua_setup' );
 
 /**
  * Load CPT Portfolios.
