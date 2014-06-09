@@ -20,9 +20,23 @@ if ( ! is_active_sidebar( 'sidebar-2' ) )
 
 // If we get this far, we have widgets. Let do this.
 ?>
-	<a href="<?php echo esc_url( home_url( '/blog' ) ); ?>">
-	<img src="<?php bloginfo('stylesheet_directory'); ?>/imagens/entrelinhas.jpg" width="100%" height="auto" alt="" />
-	</a>
+
+	<div id="link-blog">
+	
+		<?php
+		// The Query
+		query_posts( 'posts_per_page=1' );
+		// The Loop
+			while ( have_posts() ) : the_post(); ?>
+			<a href="<?php the_permalink(); ?>"  rel="bookmark" alt="<?php the_title(); ?>">		
+				<img src="<?php bloginfo('stylesheet_directory'); ?>/imagens/entrelinhas.jpg" width="100%" height="auto" alt="" />
+			</a>
+		<?php endwhile;?>
+		<?php // Reset Query
+		wp_reset_query();
+		?>
+	</div>
+	
 	<div class="posts-query-home">
 
 		 <!-- Inicio Loop -->

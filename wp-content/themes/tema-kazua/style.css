@@ -272,9 +272,10 @@ body {
 .author-archive-avatar {
     border: medium none !important;
     float: left;
-    height: 125px;
+    height: 150px;
     margin: 0 !important;
     width: 150px;
+	padding: 0 !important;
 }
 
 .autor-moldura {
@@ -293,9 +294,10 @@ body {
  	background: none repeat scroll 0 0 #FFFFFF;
     color: #2F2F2F;
     margin: 115px 0 0 3px;
-    max-width: 120px;
     padding: 3px;
     position: absolute;
+	font-size: 0.9em;
+    max-width: 115px;
 }
 
 .author-archive-avatar img{
@@ -305,6 +307,7 @@ body {
 }
 
 #image-header-autor {
+	min-height: 210px;
 	max-height: 220px;
 	overflow: hidden;
     margin-top: 15px;
@@ -853,29 +856,30 @@ img[class*="align"], img[class*="wp-image-"], #content .gallery .gallery-icon im
 
 
 .nav-previous, .previous-image {
-	background: url("imagens/flecha-anterior-menor.png") no-repeat scroll top left rgba(0, 0, 0, 0);
     float: left;
     width: 50%;
 	height: 30px;
 }
 
 .nav-next, .next-image {
-	background: url("imagens/flecha-proxima-menor.png") no-repeat scroll top right rgba(0, 0, 0, 0);
     float: right;
     text-align: right;
     width: 50%;
-	height: 30px;
 }
 
 .nav-previous a {
-  display: block;
+	background: url("imagens/flecha-anterior-menor.png") no-repeat scroll top left rgba(0, 0, 0, 0);
+    display: block;
     text-indent: -99999px;
+	height: 30px;
 }
 
 .nav-next a {
     display: block;
     text-indent: -99999px;
     text-align: left;
+	background: url("imagens/flecha-proxima-menor.png") no-repeat scroll top right rgba(0, 0, 0, 0);
+	height: 30px;
 }
 
 
