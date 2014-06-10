@@ -249,12 +249,21 @@ body {
 }
 
 .entry-header .entry-title {
-    font-size: 2em;
+    font-size: 1.6em;
     font-weight: bold;
 }
 
 .widget-area {
     width: 34%;
+}
+
+.nav-menu-internas img {
+	width: 95%;
+}
+
+.main-navigation .nav-menu-internas li {
+	width: 95%;
+	display: inline;
 }
 
 .author-single-avatar {
