@@ -61,7 +61,7 @@
 
 				<div id="header-content-terceiro">
 
-				<a class="header-button-seja-autor" href="<?php echo esc_url( home_url( '/envie-o-seu-original' ) ); ?>">
+				<a class="header-button-seja-autor" href="<?php echo esc_url( home_url( '/seja-autor/envie-o-seu-original' ) ); ?>">
 				Seja Autor
 				</a>
 				<a class="footer-button-seja-autor" href="<?php echo esc_url( home_url( '/envie-o-seu-original' ) ); ?>">
