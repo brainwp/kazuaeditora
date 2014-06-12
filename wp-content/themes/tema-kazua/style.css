@@ -33,7 +33,7 @@ Version: 0.1
 	text-indent: -99999px;
 	width: 230px;
 	height: 200px;
-	margin-left: 3px;
+	margin-left: -5px;
     float: left;
 	margin-top: 10px;
 }
@@ -133,11 +133,12 @@ a.footer-button-seja-autor {
 }
 
 #header-estudos-academicos {
-    float: left;
-    width: 1000px;
+    position: relative;
+	display: block;
+    width: 980px;
 	clear: both;
 	height: 40px;
-	margin-bottom: 20px;
+	margin: 0 auto 20px;
 }
 
 a#logo-loja {
@@ -273,7 +274,7 @@ body {
 }
 
 .widget-area {
-    width: 34%;
+    width: 33%;
 }
 
 .nav-menu-internas img {
