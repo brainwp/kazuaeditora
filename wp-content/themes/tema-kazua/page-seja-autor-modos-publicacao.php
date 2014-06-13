@@ -34,23 +34,23 @@ get_header(); ?>
 <!-- Chama página Modos de Publicação -->
 
 		<?php
-		$seja_autor = get_page_by_title( 'Modos de Publicacao' );
-		$content_seja_autor = apply_filters('the_content', $seja_autor->post_content);
+		$modos_publicacao = get_page_by_title( 'Modos de Publicacao' );
+		$content_modos_publicacao = apply_filters('the_content', $modos_publicacao->post_content);
 		?>
 		<header class="entry-header">
-		<h1 class="entry-title"><?php echo $seja_autor->post_title; ?></h1>
+		<h1 class="entry-title"><?php echo $modos_publicacao->post_title; ?></h1>
 		</header>
 		<div class="entry-content">
-		<?php echo $content_seja_autor; ?>
+		<?php echo $content_modos_publicacao; ?>
 		</div><!-- .entry-content -->
 
 	<!-- Final Modos de Publicação -->
 
-			<?php while ( have_posts() ) : the_post(); ?>
-				
 				<nav id="site-navigation" class="main-navigation" role="navigation">
-					<?php wp_nav_menu( array( 'menu' => 'modos-publicacao', 'menu_class' => 'nav-menu-internas' ) ); ?>
+					<?php wp_nav_menu( array( 'menu' => 'modos-de-publicacao', 'menu_class' => 'nav-menu-internas' ) ); ?>
 				</nav><!-- #site-navigation -->
+
+			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php if (is_page( '4445' ) ) { ?>
 				<!-- <h1 class="entry-title"><?php // the_title(); ?></h1> -->

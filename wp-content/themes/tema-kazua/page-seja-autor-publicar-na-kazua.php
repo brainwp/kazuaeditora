@@ -34,24 +34,24 @@ get_header(); ?>
 <!-- Chama página Publicar na Kazua -->
 
 		<?php
-		$seja_autor = get_page_by_title( 'Publicar na Kazua' );
-		$content_seja_autor = apply_filters('the_content', $seja_autor->post_content);
+		$publicar_na_kazua = get_page_by_title( 'Publicar na Kazua' );
+		$content_publicar_na_kazua = apply_filters('the_content', $publicar_na_kazua->post_content);
 		?>
 		<header class="entry-header">
-		<h1 class="entry-title"><?php echo $seja_autor->post_title; ?></h1>
+		<h1 class="entry-title"><?php echo $publicar_na_kazua->post_title; ?></h1>
 		</header>
 		<div class="entry-content">
-		<?php echo $content_seja_autor; ?>
+		<?php echo $content_publicar_na_kazua; ?>
 		</div><!-- .entry-content -->
 
 	<!-- Final Publicar na Kazua -->
 
-			<?php while ( have_posts() ) : the_post(); ?>
-				
 				<nav id="site-navigation" class="main-navigation" role="navigation">
 					<?php wp_nav_menu( array( 'menu' => 'publicar-na-kazua', 'menu_class' => 'nav-menu-internas' ) ); ?>
 				</nav><!-- #site-navigation -->
 
+			<?php while ( have_posts() ) : the_post(); ?>
+				
 				<?php if (is_page( '4476' ) ) { ?>
 				<!-- <h1 class="entry-title"><?php // the_title(); ?></h1> -->
 				<?php } else { ?>

@@ -30,10 +30,10 @@ function temazakua_setup() {
 	register_nav_menu( 'zungueira-da-kazua', __( 'Zungueira da Kazuá', 'twentytwelve' ) );
 	register_nav_menu( 'estudos-academicos', __( 'Estudos Acadêmicos', 'twentytwelve' ) );
 	register_nav_menu( 'seja-autor', __( 'Seja Autor', 'twentytwelve' ) );
+	register_nav_menu( 'publicar-na-kazua', __( 'Publicar na Kazuá', 'twentytwelve' ) );
+	register_nav_menu( 'modos-de-publicacao', __( 'Modos de Publicação', 'twentytwelve' ) );
 	register_nav_menu( 'artistas-convidados', __( 'Artistas Convidados', 'twentytwelve' ) );
 	register_nav_menu( 'kazua-das-artes', __( 'Kazuá das Artes', 'twentytwelve' ) );
-	register_nav_menu( 'modos-publicacao', __( 'Modos de Publicação', 'twentytwelve' ) );
-	register_nav_menu( 'publicar-na-kazua', __( 'Publicar na Kazuá', 'twentytwelve' ) );
 
 }add_action( 'after_setup_theme', 'temazakua_setup' );
 
