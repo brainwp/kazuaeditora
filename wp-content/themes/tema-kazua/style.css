@@ -80,6 +80,7 @@ a.footer-button-seja-autor {
 .main-navigation {
     margin-bottom: 1em;
 	margin-top: 0.5em;
+	text-align: left;
 }
 
 #header-zungueira {
@@ -557,6 +558,23 @@ img.alignleft, img.alignright, img.aligncenter {
 
 }
 
+.academicos-header {
+    margin: 0;
+	padding: 0;
+    width: 100%;
+}
+
+.img-destacada {
+	float: left;
+	width: auto;
+}
+
+.resumo {
+	float: left;
+	margin: 20px 0 0 20px; 
+	
+}
+
 /* Sidebar Home */
 
 .template-front-page .widget-area {
@@ -637,6 +655,11 @@ img.alignleft, img.alignright, img.aligncenter {
 body.page-template-page-estudos-academicos-php .site-content {
     width: 100%;
 }
+
+body.page-template-page-estudos-academicos-internas-php .site-content {
+    width: 100%;
+}
+
 
 .archive-meta {
     color: #333;

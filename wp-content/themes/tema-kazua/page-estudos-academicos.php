@@ -3,19 +3,20 @@
  * @package WordPress
  * @subpackage Twenty_Twelve
  * @since Twenty Twelve 1.0
- * Template name: Estudos Acadêmicos
+ * Template name: Estudos Acadêmicos Inicial
  */
 
 get_header(); ?>
 
 	<div id="primary" class="site-content">
 		<div id="content" role="main">
-
+			<div id="header-estudos-academicos">
+			<a href="<?php echo esc_url( home_url( '/estudos-academicos' ) ); ?>">
+				<img src="<?php bloginfo('stylesheet_directory'); ?>/imagens/06AA-kazua-estudos-academicos.jpg" width="100%" height="auto" alt="" />
+			</a>
+			</div>				
 			<?php while ( have_posts() ) : the_post(); ?>
 				<?php get_template_part( 'content', 'page' ); ?>
-				<nav id="site-navigation" class="main-navigation" role="navigation">
-					<?php wp_nav_menu( array( 'menu' => 'estudos-academicos', 'menu_class' => 'nav-menu-internas' ) ); ?>
-				</nav><!-- #site-navigation -->
 				<?php if ( have_comments() ) : ?>
 					<?php comments_template( '', true ); ?>
 				<?php else : // or, if we don't have comments:

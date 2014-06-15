@@ -28,12 +28,18 @@ function temazakua_setup() {
 	register_nav_menu( 'trabalhe-conosco', __( 'Trabalhe Conosco', 'twentytwelve' ) );
 	register_nav_menu( 'espaco-negra-anastacia', __( 'Espaço Negra Anastácia de Novos Autores', 'twentytwelve' ) );
 	register_nav_menu( 'zungueira-da-kazua', __( 'Zungueira da Kazuá', 'twentytwelve' ) );
-	register_nav_menu( 'estudos-academicos', __( 'Estudos Acadêmicos', 'twentytwelve' ) );
 	register_nav_menu( 'seja-autor', __( 'Seja Autor', 'twentytwelve' ) );
 	register_nav_menu( 'publicar-na-kazua', __( 'Publicar na Kazuá', 'twentytwelve' ) );
 	register_nav_menu( 'modos-de-publicacao', __( 'Modos de Publicação', 'twentytwelve' ) );
 	register_nav_menu( 'artistas-convidados', __( 'Artistas Convidados', 'twentytwelve' ) );
 	register_nav_menu( 'kazua-das-artes', __( 'Kazuá das Artes', 'twentytwelve' ) );
+	register_nav_menu( 'academicos-publicacoes', __( 'Acadêmicos - Publicações', 'twentytwelve' ) );
+	register_nav_menu( 'academicos-comunicacao', __( 'Acadêmicos - Comunicação', 'twentytwelve' ) );
+	register_nav_menu( 'academicos-estudos-olimpicos', __( 'Acadêmicos - Estudos Olímpicos', 'twentytwelve' ) );
+	register_nav_menu( 'academicos-filosofia', __( 'Acadêmicos - Filosofia', 'twentytwelve' ) );
+	register_nav_menu( 'academicos-psicologia', __( 'Acadêmicos - Psicologia', 'twentytwelve' ) );
+	register_nav_menu( 'academicos-educacao', __( 'Acadêmicos - Educação ', 'twentytwelve' ) );
+	register_nav_menu( 'academicos-envie-proposta', __( 'Acadêmicos - Envie sua Proposta ', 'twentytwelve' ) );
 
 }add_action( 'after_setup_theme', 'temazakua_setup' );
 
@@ -126,3 +132,7 @@ function ilc_cpt_custom_column($column_name, $post_id) {
     }
     else echo '<i>Nenhum status de autor.</i>';
 }
+// Adiciona suporte à Resumo nas Páginas
+add_post_type_support( 'page', 'excerpt');
+// Adiciona tamanho de thumbnail
+add_image_size( 'thumb-academicos',250, 180);
