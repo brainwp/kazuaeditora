@@ -1034,3 +1034,63 @@ background: url("imagens/flecha-anterior-menor.png") no-repeat scroll left top r
 #jj-next-post {
  background: url("imagens/flecha-proxima-menor.png") no-repeat scroll right top rgba(0, 0, 0, 0);
 }
+
+/* Formulários de Contatos */
+
+.contact-form label {
+    margin-bottom: 0 !important;
+}
+
+.contact-form7-nome {
+	text-indent: -9999px;
+	background: url("imagens/formulario_nome.jpg") no-repeat scroll left top rgba(0, 0, 0, 0);
+	float: left;
+    width: 140px;
+}
+
+.contact-form7-email {
+	text-indent: -9999px;
+	background: url("imagens/formulario_email.jpg") no-repeat scroll left top rgba(0, 0, 0, 0);
+	float: left;
+    width: 140px;
+}
+
+.contact-form7-telefone {
+	text-indent: -9999px;
+	background: url("imagens/formulario_telefone.jpg") no-repeat scroll left top rgba(0, 0, 0, 0);
+	float: left;
+    width: 140px;
+}
+
+.contact-form7-assunto {
+	text-indent: -9999px;
+	background: url("imagens/formulario_assunto.jpg") no-repeat scroll left top rgba(0, 0, 0, 0);
+	float: left;
+    width: 140px;
+}
+
+.contact-form7-mensagem {
+	text-indent: -9999px;
+	background: url("imagens/formulario_mensagem.jpg") no-repeat scroll left top rgba(0, 0, 0, 0);
+	float: left;
+    width: 140px;
+}
+
+.wpcf7-submit {
+	text-indent: -9999px;
+	background: url("imagens/flecha-envie-sua-mensagem.jpg") no-repeat scroll left top rgba(0, 0, 0, 0) !important;
+    width: 479px;
+	height: 68px;
+    border-radius: 0;
+}
+
+input[type="submit"] {
+	background-color: none;
+	border: 0;
+	box-shadow: none;
+}
+
+input[type="submit"]:hover {
+	background-color: none;
+	border: 0 none;
+}
