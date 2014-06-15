@@ -15,8 +15,8 @@ get_header(); ?>
 				
 				<?php get_template_part( 'content', 'page' ); ?>
 				
-				<nav id="site-navigation" class="main-navigation" role="navigation">
-					<?php wp_nav_menu( array( 'menu' => 'trabalhe-conosco', 'menu_class' => 'nav-menu-internas' ) ); ?>
+				<nav id="template-navigation" class="main-navigation" role="navigation">
+					<?php wp_nav_menu( array( 'menu' => 'trabalhe-conosco', 'menu_class' => 'nav-menu' ) ); ?>
 				</nav><!-- #site-navigation -->
 
 			<?php endwhile; // end of the loop. ?>

@@ -28,8 +28,8 @@ get_header(); ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
 				
-				<nav id="site-navigation" class="main-navigation" role="navigation">
-					<?php wp_nav_menu( array( 'menu' => 'trabalhe-conosco', 'menu_class' => 'nav-menu-internas' ) ); ?>
+				<nav id="template-navigation" class="main-navigation" role="navigation">
+					<?php wp_nav_menu( array( 'menu' => 'trabalhe-conosco', 'menu_class' => 'nav-menu' ) ); ?>
 				</nav><!-- #site-navigation -->
 
 				<?php if (is_page( 'trabalhe-conosco' ) ) { ?>

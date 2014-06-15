@@ -24,8 +24,8 @@ get_header(); ?>
 		<?php echo $content_seja_autor; ?>
 		</div><!-- .entry-content -->
 
-				<nav id="site-navigation" class="main-navigation" role="navigation">
-					<?php wp_nav_menu( array( 'menu' => 'seja-autor', 'menu_class' => 'nav-menu-internas' ) ); ?>
+				<nav id="template-navigation" class="main-navigation" role="navigation">
+					<?php wp_nav_menu( array( 'menu' => 'seja-autor', 'menu_class' => 'nav-menu' ) ); ?>
 				</nav><!-- #site-navigation -->
 
 
@@ -46,8 +46,8 @@ get_header(); ?>
 
 	<!-- Final Modos de Publicação -->
 
-				<nav id="site-navigation" class="main-navigation" role="navigation">
-					<?php wp_nav_menu( array( 'menu' => 'modos-de-publicacao', 'menu_class' => 'nav-menu-internas' ) ); ?>
+				<nav id="template-navigation" class="main-navigation" role="navigation">
+					<?php wp_nav_menu( array( 'menu' => 'modos-de-publicacao', 'menu_class' => 'nav-menu' ) ); ?>
 				</nav><!-- #site-navigation -->
 
 			<?php while ( have_posts() ) : the_post(); ?>

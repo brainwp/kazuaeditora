@@ -278,15 +278,6 @@ body {
     width: 33%;
 }
 
-.nav-menu-internas img {
-	width: 95%;
-}
-
-.main-navigation .nav-menu-internas li {
-	width: 95%;
-	display: inline;
-}
-
 .author-single-avatar {
 	display: table;
     margin: 150px 0 0 15px;
@@ -1017,16 +1008,6 @@ p.catalogoautor{
 	float:left;
 	position:relative;
 	width:38%;
-}
-
-.nav-menu-internas {
-	height: auto;
-}
-
-.main-navigation ul.nav-menu-internas {
-    border: medium none;
-    margin-left: 0;
-    width: 100%;
 }
 
 .site-content nav {

@@ -13,8 +13,8 @@ get_header(); ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
 				<?php get_template_part( 'content', 'page' ); ?>
-				<nav id="site-navigation" class="main-navigation" role="navigation">
-					<?php wp_nav_menu( array( 'menu' => 'artistas-convidados', 'menu_class' => 'nav-menu-internas' ) ); ?>
+				<nav id="template-navigation" class="main-navigation" role="navigation">
+					<?php wp_nav_menu( array( 'menu' => 'artistas-convidados', 'menu_class' => 'nav-menu' ) ); ?>
 				</nav><!-- #site-navigation -->
 				<?php if ( have_comments() ) : ?>
 					<?php comments_template( '', true ); ?>

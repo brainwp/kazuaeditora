@@ -32,32 +32,32 @@ get_header(); ?>
 				</header>
 
 				<?php if (is_page( 'kazua-de-comunicacao' ) ) { ?>
-				<nav id="site-navigation" class="main-navigation" role="navigation">
-					<?php wp_nav_menu( array( 'menu' => 'academicos-comunicacao', 'menu_class' => 'nav-menu-internas' ) ); ?>
+				<nav id="template-navigation" class="main-navigation" role="navigation">
+					<?php wp_nav_menu( array( 'menu' => 'academicos-comunicacao', 'menu_class' => 'nav-menu' ) ); ?>
 				</nav><!-- #site-navigation -->
 				<?php } elseif  (is_page( 'kazua-publicacoes-academicas' ) ) { ?>
-				<nav id="site-navigation" class="main-navigation" role="navigation">
-					<?php wp_nav_menu( array( 'menu' => 'academicos-publicacoes', 'menu_class' => 'nav-menu-internas' ) ); ?>
+				<nav id="template-navigation" class="main-navigation" role="navigation">
+					<?php wp_nav_menu( array( 'menu' => 'academicos-publicacoes', 'menu_class' => 'nav-menu' ) ); ?>
 				</nav><!-- #site-navigation -->
 				<?php } elseif  (is_page( 'kazua-de-estudos-olimpicos' ) ) { ?>
-				<nav id="site-navigation" class="main-navigation" role="navigation">
-					<?php wp_nav_menu( array( 'menu' => 'academicos-estudos-olimpicos', 'menu_class' => 'nav-menu-internas' ) ); ?>
+				<nav id="template-navigation" class="main-navigation" role="navigation">
+					<?php wp_nav_menu( array( 'menu' => 'academicos-estudos-olimpicos', 'menu_class' => 'nav-menu' ) ); ?>
 				</nav><!-- #site-navigation -->
 				<?php } elseif  (is_page( 'envie-sua-proposta' ) ) { ?>
-				<nav id="site-navigation" class="main-navigation" role="navigation">
-					<?php wp_nav_menu( array( 'menu' => 'academicos-envie-proposta', 'menu_class' => 'nav-menu-internas' ) ); ?>
+				<nav id="template-navigation" class="main-navigation" role="navigation">
+					<?php wp_nav_menu( array( 'menu' => 'academicos-envie-proposta', 'menu_class' => 'nav-menu' ) ); ?>
 				</nav><!-- #site-navigation -->
 				<?php } elseif  (is_page( 'kazua-de-filosofia' ) ) { ?>
-				<nav id="site-navigation" class="main-navigation" role="navigation">
-					<?php wp_nav_menu( array( 'menu' => 'academicos-filosofia', 'menu_class' => 'nav-menu-internas' ) ); ?>
+				<nav id="template-navigation" class="main-navigation" role="navigation">
+					<?php wp_nav_menu( array( 'menu' => 'academicos-filosofia', 'menu_class' => 'nav-menu' ) ); ?>
 				</nav><!-- #site-navigation -->
 				<?php } elseif  (is_page( 'kazua-de-psicologia' ) ) { ?>
-				<nav id="site-navigation" class="main-navigation" role="navigation">
-					<?php wp_nav_menu( array( 'menu' => 'academicos-psicologia', 'menu_class' => 'nav-menu-internas' ) ); ?>
+				<nav id="template-navigation" class="main-navigation" role="navigation">
+					<?php wp_nav_menu( array( 'menu' => 'academicos-psicologia', 'menu_class' => 'nav-menu' ) ); ?>
 				</nav><!-- #site-navigation -->
 				<?php } elseif  (is_page( 'kazua-de-educacao' ) ) { ?>
-				<nav id="site-navigation" class="main-navigation" role="navigation">
-					<?php wp_nav_menu( array( 'menu' => 'academicos-educacao', 'menu_class' => 'nav-menu-internas' ) ); ?>
+				<nav id="template-navigation" class="main-navigation" role="navigation">
+					<?php wp_nav_menu( array( 'menu' => 'academicos-educacao', 'menu_class' => 'nav-menu' ) ); ?>
 				</nav><!-- #site-navigation -->
 				<?php } else { ?>
 				<h1 class="entry-title"><?php the_title(); ?></h1>

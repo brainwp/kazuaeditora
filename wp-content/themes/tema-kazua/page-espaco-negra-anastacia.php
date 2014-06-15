@@ -29,10 +29,11 @@ get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 			<a href="<?php echo esc_url( home_url( '/kamaradagem-literaria' ) ); ?>">
 				<img src="<?php bloginfo('stylesheet_directory'); ?>/imagens/botao-kamaradagem-literaria.jpg">
-			</a>
-				<nav id="site-navigation" class="main-navigation" role="navigation">
-					<?php wp_nav_menu( array( 'menu' => 'espaco-negra-anastacia', 'menu_class' => 'nav-menu-internas' ) ); ?>
-				</nav><!-- #site-navigation -->
+			</a>	
+
+			<nav id="template-navigation" class="main-navigation" role="navigation">
+			<?php wp_nav_menu( array( 'menu' => 'espaco-negra-anastacia', 'menu_class' => 'nav-menu' ) ); ?>
+			</nav><!-- #site-navigation -->
 
   				<?php if (is_page( 'espaco-negra-anastacia-de-novos-autores' ) ) { ?>
 				<p class="nocomments"> </p>
