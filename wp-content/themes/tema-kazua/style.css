@@ -240,6 +240,12 @@ body {
     width: 65%;
 }
 
+.site-content-front {
+    margin: 1em 0 0;
+    float: left;
+    width: 100%;
+}
+
 .site-content article {
     background: none repeat scroll 0 0 rgba(255, 255, 255, 0.6);
     border-bottom: 0 none;
@@ -720,11 +726,11 @@ h1{
 
 #colophon {
 	background: #000;
-	padding: 1.2em 0 0.8em;
+	padding: 1.2em 2.85714rem 0.8em;
 	margin-left: 0;
     margin-right: 0;
 	margin-top: 0;
-	width: 100%;
+	min-width: 1000px;
 	max-width: none;
 }
 
@@ -883,11 +889,9 @@ element.style {
 }
 
 #page {
-
 	background: #fff;
-	max-width: 1000px;
+	min-width: 1000px;
 	font-family: Arial, Helvetica, sans-serif;
-
 }
 
 
@@ -1120,4 +1124,23 @@ input[type="submit"] {
 input[type="submit"]:hover {
 	background-color: none;
 	border: 0 none;
+}
+
+
+@media screen and (max-width: 480px) {
+
+ .main-small-navigation .menu {
+  display: block;
+ }
+ .site-navigation h1.menu-toggle {
+  display: none;
+ }
+
+}
+
+@media screen and (max-width: 680px) {
+
+ .menu-toggle {
+  display: none;
+ }
 }

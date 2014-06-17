@@ -12,7 +12,7 @@
 
 get_header(); ?>
 
-	<div id="primary" class="site-content">
+	<div class="site-content-front">
 		
 		<div id="header-negra-anastacia">
 			<a href="<?php echo esc_url( home_url( '/espaco-negra-anastacia-de-novos-autores' ) ); ?>">
