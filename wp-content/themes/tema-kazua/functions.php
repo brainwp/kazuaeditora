@@ -33,15 +33,15 @@ function temazakua_setup() {
 	register_nav_menu( 'modos-de-publicacao', __( 'Modos de Publicação', 'twentytwelve' ) );
 	register_nav_menu( 'artistas-convidados', __( 'Artistas Convidados', 'twentytwelve' ) );
 	register_nav_menu( 'kazua-das-artes', __( 'Kazuá das Artes', 'twentytwelve' ) );
-	register_nav_menu( 'academicos-publicacoes', __( 'Acadêmicos - Publicações', 'twentytwelve' ) );
+	register_nav_menu( 'geral-publicacoes', __( 'Menu Geral Estudos Acadêmicos', 'twentytwelve' ) );
 	register_nav_menu( 'academicos-comunicacao', __( 'Acadêmicos - Comunicação', 'twentytwelve' ) );
 	register_nav_menu( 'academicos-estudos-olimpicos', __( 'Acadêmicos - Estudos Olímpicos', 'twentytwelve' ) );
 	register_nav_menu( 'academicos-filosofia', __( 'Acadêmicos - Filosofia', 'twentytwelve' ) );
 	register_nav_menu( 'academicos-psicologia', __( 'Acadêmicos - Psicologia', 'twentytwelve' ) );
 	register_nav_menu( 'academicos-educacao', __( 'Acadêmicos - Educação ', 'twentytwelve' ) );
-	register_nav_menu( 'academicos-envie-proposta', __( 'Acadêmicos - Envie sua Proposta ', 'twentytwelve' ) );
-
-}add_action( 'after_setup_theme', 'temazakua_setup' );
+	register_nav_menu( 'academicos-critica-social', __( 'Acadêmicos - Critica Social ', 'twentytwelve' ) );
+}
+add_action( 'after_setup_theme', 'temazakua_setup' );
 
 /**
  * Load CPT Portfolios.

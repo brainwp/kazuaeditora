@@ -31,31 +31,27 @@ get_header(); ?>
 					</div>
 				</header>
 
-				<?php if (is_page( 'kazua-de-comunicacao' ) ) { ?>
+				<?php if (is_page( 'kazua-de-comunicacao' || $post->post_parent == 'kazua-de-comunicacao' ) ) { ?>
 				<nav id="template-navigation" class="main-navigation" role="navigation">
 					<?php wp_nav_menu( array( 'menu' => 'academicos-comunicacao', 'menu_class' => 'nav-menu' ) ); ?>
 				</nav><!-- #site-navigation -->
-				<?php } elseif  (is_page( 'kazua-publicacoes-academicas' ) ) { ?>
+				<?php } elseif  (is_page( 'kazua-de-critica-social' || $post->post_parent == 'kazua-de-critica-social') ) { ?>
 				<nav id="template-navigation" class="main-navigation" role="navigation">
-					<?php wp_nav_menu( array( 'menu' => 'academicos-publicacoes', 'menu_class' => 'nav-menu' ) ); ?>
+					<?php wp_nav_menu( array( 'menu' => 'academicos-critica-social', 'menu_class' => 'nav-menu' ) ); ?>
 				</nav><!-- #site-navigation -->
-				<?php } elseif  (is_page( 'kazua-de-estudos-olimpicos' ) ) { ?>
+				<?php } elseif  (is_page( 'kazua-de-estudos-olimpicos' || $post->post_parent == 'kazua-de-estudos-olimpicos') ) { ?>
 				<nav id="template-navigation" class="main-navigation" role="navigation">
 					<?php wp_nav_menu( array( 'menu' => 'academicos-estudos-olimpicos', 'menu_class' => 'nav-menu' ) ); ?>
 				</nav><!-- #site-navigation -->
-				<?php } elseif  (is_page( 'envie-sua-proposta' ) ) { ?>
-				<nav id="template-navigation" class="main-navigation" role="navigation">
-					<?php wp_nav_menu( array( 'menu' => 'academicos-envie-proposta', 'menu_class' => 'nav-menu' ) ); ?>
-				</nav><!-- #site-navigation -->
-				<?php } elseif  (is_page( 'kazua-de-filosofia' ) ) { ?>
+				<?php } elseif  (is_page( 'kazua-de-filosofia' || $post->post_parent == 'kazua-de-filosofia' ) ) { ?>
 				<nav id="template-navigation" class="main-navigation" role="navigation">
 					<?php wp_nav_menu( array( 'menu' => 'academicos-filosofia', 'menu_class' => 'nav-menu' ) ); ?>
 				</nav><!-- #site-navigation -->
-				<?php } elseif  (is_page( 'kazua-de-psicologia' ) ) { ?>
+				<?php } elseif  (is_page( 'kazua-de-psicologia' || $post->post_parent == 'kazua-de-psicologia') ) { ?>
 				<nav id="template-navigation" class="main-navigation" role="navigation">
 					<?php wp_nav_menu( array( 'menu' => 'academicos-psicologia', 'menu_class' => 'nav-menu' ) ); ?>
 				</nav><!-- #site-navigation -->
-				<?php } elseif  (is_page( 'kazua-de-educacao' ) ) { ?>
+				<?php } elseif  (is_page( 'kazua-de-educacao' || $post->post_parent == 'kazua-de-educacao') ) { ?>
 				<nav id="template-navigation" class="main-navigation" role="navigation">
 					<?php wp_nav_menu( array( 'menu' => 'academicos-educacao', 'menu_class' => 'nav-menu' ) ); ?>
 				</nav><!-- #site-navigation -->
@@ -82,4 +78,5 @@ get_header(); ?>
 			<?php endwhile; // end of the loop. ?>
 
 		</div><!-- #content -->
+	</div>
 <?php get_footer(); ?>

@@ -77,9 +77,20 @@ a.footer-button-seja-autor {
 	text-indent: -9999px;
 }
 
+footer[role="contentinfo"] {
+    border-top: medium none;
+}
+
+body .site {
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 0 2.85714rem 2em;
+	box-shadow: none;
+}
+
 .main-navigation {
     margin-bottom: 1em;
-	margin-top: 0.5em;
+	margin-top: 1em;
 	text-align: left;
 }
 
@@ -235,6 +246,10 @@ body {
     margin-left: 5px;
     padding: 10px;
 	margin-bottom: 20px;
+	word-wrap: break-word;
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	hyphens: none;
 }
 
 .archive-header, .page-header {
@@ -248,6 +263,7 @@ body {
 .archive-title, .page-title, .widget-title, .entry-content th, .comment-content th {
     color: #333333;
 	font-size: 1.3em;
+	text-transform: none;
 }
 
 .archive-autor .type-autor {
@@ -430,6 +446,13 @@ a.btn-compre {
     background-color: #EEE;
 }
 
+#nav-below {
+	display: block;
+    height: 20px;
+    margin-bottom: 10px;
+    width: auto;
+}
+
 /*menu*/
 
 
@@ -557,13 +580,15 @@ img.alignleft, img.alignright, img.aligncenter {
 
 .img-destacada {
 	float: left;
-	width: auto;
+    max-width: 230px;
+    width: auto;
 }
 
 .resumo {
 	float: left;
-	margin: 20px 0 0 20px; 
-	
+    line-height: 1.71429;
+    margin: 0 0 0 20px;
+    max-width: 700px;
 }
 
 /* Sidebar Home */
@@ -655,8 +680,9 @@ body.page-template-page-estudos-academicos-internas-php .site-content {
 .archive-meta {
     color: #333;
     font-size: 1em;
-    line-height: 2;
+    line-height: 1.71429;
     margin-top: 1.5em;
+	margin-right: 35px;
 }
 
 /*remover botao search*/
@@ -697,6 +723,7 @@ h1{
 	padding: 1.2em 0 0.8em;
 	margin-left: 0;
     margin-right: 0;
+	margin-top: 0;
 	width: 100%;
 	max-width: none;
 }

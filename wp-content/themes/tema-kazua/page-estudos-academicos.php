@@ -14,8 +14,9 @@ get_header(); ?>
 			<a href="<?php echo esc_url( home_url( '/estudos-academicos' ) ); ?>">
 				<img src="<?php bloginfo('stylesheet_directory'); ?>/imagens/06AA-kazua-estudos-academicos.jpg" width="100%" height="auto" alt="" />
 			</a>
-			</div>				
+			</div>
 			<?php while ( have_posts() ) : the_post(); ?>
+
 				<?php get_template_part( 'content', 'page' ); ?>
 				<?php if ( have_comments() ) : ?>
 					<?php comments_template( '', true ); ?>
@@ -27,4 +28,5 @@ get_header(); ?>
 			<?php endwhile; // end of the loop. ?>
 
 		</div><!-- #content -->
+	</div>
 <?php get_footer(); ?>

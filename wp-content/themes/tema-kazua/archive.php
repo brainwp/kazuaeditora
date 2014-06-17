@@ -20,7 +20,6 @@
 get_header(); ?>
 
 	<section id="primary" class="site-content">
-		<div id="content" role="main">
 
 		<?php if ( have_posts() ) : ?>
 			<header class="archive-header">
@@ -36,7 +35,7 @@ get_header(); ?>
 					endif;
 				?></h1>
 			</header><!-- .archive-header -->
-
+		<div id="content" role="main">
 			<?php
 			/* Start the Loop */
 			while ( have_posts() ) : the_post();

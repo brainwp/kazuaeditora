@@ -14,7 +14,7 @@
 get_header(); ?>
 
 	<section id="primary" class="site-content">
-		<div id="content" role="main">
+		
 
 		<?php if ( have_posts() ) : ?>
 			<header class="archive-header">
@@ -24,7 +24,8 @@ get_header(); ?>
 				<div class="archive-meta"><?php echo category_description(); ?></div>
 			<?php endif; ?>
 			</header><!-- .archive-header -->
-
+			
+		<div id="content" class="fundo-blog" role="main">
 			<?php
 			/* Start the Loop */
 			while ( have_posts() ) : the_post();
