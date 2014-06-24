@@ -33,7 +33,10 @@ get_header(); ?>
 				</nav><!-- #site-navigation -->
 
 				<?php if (is_page( 'trabalhe-conosco' ) ) { ?>
-				<p class="nocomments"> </p>
+				<a href="<?php echo esc_url( home_url( 'editora-kazua/trabalhe-conosco-formulario' ) ); ?>">
+					<div id="botao-trabalhe-conosco">
+					</div>
+				</a>
 				<?php } else { ?>
 				<?php get_template_part( 'content', 'page' ); ?>
 				<?php } ?>

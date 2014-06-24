@@ -14,7 +14,7 @@ get_header(); ?>
 <!-- Chama página Seja Autor -->
 
 		<?php
-		$seja_autor = get_page_by_title( 'Seja Autor' );
+		$seja_autor = get_page_by_title( 'Seja Autor!' );
 		$content_seja_autor = apply_filters('the_content', $seja_autor->post_content);
 		?>
 		<header class="entry-header">
