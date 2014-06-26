@@ -27,7 +27,14 @@
 				the_post_thumbnail();
 			endif; ?>
 			</div>
+
 			<div id="menu-botoes-autor">
+
+				<?php
+				// always good to see exactly what you are working with
+				//var_dump($values);
+				?>
+
 				<?php
 				if(get_field('kamaradagem_do_autor'))
 				{
@@ -40,11 +47,16 @@
 					echo '<a class="btn-acoes" href="' . get_field('acoes_de_divulgacao') . '">Acoes de Divulgacao</a>';
 				}
 				?>	
-				<?php
-				if(get_field('blog_do_autor'))
-				{
-					echo '<a class="btn-blog-autor" href="' . get_field('blog_do_autor') . '">Blog do Autor</a>';
-				}
+				<?php if(get_field('blog_do_autor'))
+					{
+				$values = get_field('blog_do_autor');
+				if($values)
+						{	foreach($values as $value)
+							{
+								echo '<a class="btn-blog-autor" href="' . get_category_link($value) . '">Blog do Autor</a>';
+							}
+						}
+					}
 				?>	
 				<?php
 				if(get_field('compre'))
@@ -53,6 +65,7 @@
 				}
 				?>
 			</div>
+
 		</header><!-- .entry-header -->
 
 		<?php if ( is_search() ) : // Only display Excerpts for Search ?>
