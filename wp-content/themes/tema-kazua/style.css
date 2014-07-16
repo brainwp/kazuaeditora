@@ -683,6 +683,30 @@ body.page-template-page-estudos-academicos-internas-php .site-content {
 }
 
 
+body.page-template-page-estudos-academicos-comunicacao-php .site-content {
+    width: 100%;
+}
+
+body.page-template-page-estudos-academicos-olimpicos-php .site-content {
+    width: 100%;
+}
+
+body.page-template-page-estudos-academicos-filosofia-php .site-content {
+    width: 100%;
+}
+
+body.page-template-page-estudos-academicos-psicologia-php .site-content {
+    width: 100%;
+}
+
+body.page-template-page-estudos-academicos-critica-social-php .site-content {
+    width: 100%;
+}
+
+body.page-template-page-estudos-academicos-educacao-php .site-content {
+    width: 100%;
+}
+
 .archive-meta {
     color: #333;
     font-size: 1em;
