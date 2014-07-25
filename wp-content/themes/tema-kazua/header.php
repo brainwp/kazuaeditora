@@ -54,16 +54,16 @@
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<!-- <h2 class="site-description"><?php // bloginfo( 'description' ); ?></h2> -->
 		
-			<a class="link-seja-autor" href="<?php echo esc_url( home_url( '/seja-autor' ) ); ?>">
-				<div id="header-content-seja-autor">
-					<img src="<?php bloginfo('stylesheet_directory'); ?>/imagens/kazua-banner-principal.jpg" width="100%" height="auto" alt="" />
-				</div>
-			</a>
+			<div id="link-seja-autor">
+				<a class="header-content-seja-autor" href="<?php echo esc_url( home_url( '/seja-autor' ) ); ?>">
+				Seja Autor
+				</a>
+			</div>
 
 				<div id="header-content-terceiro">
 
 				<a class="header-button-seja-autor" href="<?php echo esc_url( home_url( '/seja-autor/envie-o-seu-original' ) ); ?>">
-				Seja Autor
+				Envie seu original
 				</a>
 				<a class="footer-button-seja-autor" href="<?php echo esc_url( home_url( '/envie-o-seu-original' ) ); ?>">
 					<img src="<?php bloginfo('stylesheet_directory'); ?>/imagens/envie-seu-original.jpg" width="100%" height="auto" alt="Envie seu original" />

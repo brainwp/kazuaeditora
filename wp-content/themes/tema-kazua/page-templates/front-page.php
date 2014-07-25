@@ -91,13 +91,13 @@ get_header(); ?>
 					<a href="http://www.zungueira.com.br/lancamentos/entre-semioticas.html" target="_blank">
 						<img src="<?php bloginfo('stylesheet_directory'); ?>/imagens/entre-semioticas-capa.jpg" width="100%" height="auto" alt="" />
 					</a>
-						<a class="title" href="http://www.zungueira.com.br/lancamentos/entre-semioticas.html" target="_blank">Entre-semióticas</a>
+						<a class="title" href="http://www.zungueira.com.br/lancamentos/entre-semioticas.html" target="_blank">Entre-semióticas de Nísia M. do Rosário, Lizete D. de Oliveira e Fábio Pezzi</a>
 					</div>					
 					<div class="exemplar" >
 					<a href="http://www.zungueira.com.br/lancamentos/para-quando-o-entulho-soterrar-os-joelhos.html" target="_blank">
 						<img src="<?php bloginfo('stylesheet_directory'); ?>/imagens/para-quando-o-entulho-soterrar-os-joelhos-capa.jpg" width="100%" height="auto" alt=""  />
 					</a>
-						<a class="title" href="http://www.zungueira.com.br/lancamentos/para-quando-o-entulho-soterrar-os-joelhos.html" target="_blank">Para Quando o Entulho Soterrar os Joelhos</a>
+						<a class="title" href="http://www.zungueira.com.br/lancamentos/para-quando-o-entulho-soterrar-os-joelhos.html" target="_blank">Para Quando o Entulho Soterrar os Joelhos de Fernando T. de Andrade</a>
 					</div>
 					<div class="exemplar" >
 					<a href="http://www.zungueira.com.br/lancamentos/o-caos-do-acaso-de-mauro-nunes.html" target="_blank">
@@ -109,7 +109,7 @@ get_header(); ?>
 						<a href="http://www.zungueira.com.br/lancamentos/memorias-heliopolis-criacao-coletiva.html" target="_blank">				
 						<img src="<?php bloginfo('stylesheet_directory'); ?>/imagens/memorias-heliopolis-capa.jpg" width="100%" height="auto" alt="" />
 						</a>
-						<a class="title" href="http://www.zungueira.com.br/lancamentos/memorias-heliopolis-criacao-coletiva.html" target="_blank">Memórias de Heliópolis</a>
+						<a class="title" href="http://www.zungueira.com.br/lancamentos/memorias-heliopolis-criacao-coletiva.html" target="_blank">Memórias de Heliópolis de Criação Coletiva</a>
 					</div>
 					<div class="exemplar" >
 					<a href="http://www.zungueira.com.br/lancamentos/meia-pata-ricardo-dantas.html" target="_blank">
@@ -129,7 +129,7 @@ get_header(); ?>
 					</a>
 						<a class="title" href="http://www.zungueira.com.br/no-diva-palhaco-carlos-biaggioli.html" target="_blank">No divã do palhaço, de Carlos Biaggioli</a>
 					</div>
-				</div>	
+			</div>	
 				<a id="botao-de-baixo-loja" href="http://www.zungueira.com.br/" target="_blank">
 			<img src="<?php bloginfo('stylesheet_directory'); ?>/imagens/rodape-loja.jpg" width="100%" height="auto" alt="" />
 				</a>

@@ -38,19 +38,29 @@ Version: 0.1
 	margin-top: 10px;
 }
 
-#header-content-seja-autor {
-	background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+#link-seja-autor {
+	background:none repeat scroll 0 0 rgba(0, 0, 0, 0);
     float: left;
-    height: 195px;
-    margin: 0 20px;
-    width: 530px;
+    height: 200px;
+    margin: 13px 20px 0;
+    width: 550px;
+	text-indent: -99999px;
 }
 
-.link-seja-autor {
-   float: left;
-    margin: 13px 20px 0 5px;
+
+a.header-content-seja-autor {
+	background: url('imagens/kazua-banner-principal.jpg') repeat scroll 0 0 rgba(0, 0, 0, 0);
+	background-size: 550px 200px;
+    height: 195px;
     width: 550px;
+	display: block;
 }
+
+a.header-content-seja-autor:hover {
+	background: url('imagens/kazua-banner-principal-02.jpg') repeat scroll 0 0 rgba(0, 0, 0, 0);
+	background-size: 550px 200px;
+}
+
 
 #header-content-terceiro {
     float: left;
@@ -64,7 +74,7 @@ a.header-button-seja-autor {
     height: 180px;
     margin: 0;
     width: 160px;
-	text-indent: -999px;
+	text-indent: -99999px;
 }
 
 a.header-button-seja-autor:hover {
@@ -174,7 +184,7 @@ a#logo-loja {
 	float: left;
     margin: 5px 5px 16px;
     max-width: 170px;
-    min-height: 230px;
+    min-height: 240px;
 	padding: 0 5px;
 	text-align:center;
 }
