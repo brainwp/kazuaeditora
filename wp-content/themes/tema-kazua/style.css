@@ -308,6 +308,7 @@ body {
 
 .widget-area {
     width: 33%;
+    float: left;
 }
 
 .author-single-avatar {
@@ -382,6 +383,10 @@ body {
 
 .entry-content img, .comment-content img, .widget img, img.header-image, .author-avatar img, img.wp-post-image {
     box-shadow: none	;
+}
+
+.entry-content p {
+	line-height: 1.5em;
 }
 
 #menu-botoes-autor {
@@ -471,26 +476,16 @@ a.btn-compre {
 
 /*menu*/
 
-
-
 #access {
-
     background: #FFF;
-
 	border:#999 thin;
-
    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
-
 }
 
 #access a {
-
 	color: black;
-
 	font-weight: bold;
-
 	padding: 0 0.6em;
-
 }
 
 .main-navigation ul.nav-menu {
@@ -507,6 +502,7 @@ a.btn-compre {
 
 .main-navigation li {
     margin: 0 -3px 0 0;
+	float: left;
 }
 
 .main-navigation li a {
@@ -542,6 +538,11 @@ a.btn-compre {
 
 .main-navigation li ul.sub-menu {
 	width: auto;
+}
+
+
+.main-navigation ul.nav-menu, .main-navigation div.nav-menu > ul {
+    display: block;
 }
 
 /* menu - subniveis*/
@@ -787,13 +788,6 @@ h1{
 
 /*bloco de comentario*/
 
-#respond {
-
-    background: none repeat scroll 0 0 transparent;
-    border: 0px;
-    }
-
-
 /*ocultar no plugin de imagem*/
 
 .slideshowlink {
@@ -981,17 +975,19 @@ img[class*="align"], img[class*="wp-image-"], #content .gallery .gallery-icon im
 }
 
 #comments {
-    background: none repeat scroll 0 0 rgba(200, 200, 200, 0.6);
+    background: none;
     border-bottom: 0 none;
-    padding: 15px;
 	margin-left: 5px;
 
 }
 
 #respond {
-    margin-top: 1em;
-}
 
+    background: none repeat scroll 0 0 rgba(200, 200, 200, 0.6);
+    border: 0px;
+    margin-top: 1em;
+    padding: 15px;
+    }
 
 .nav-previous, .previous-image {
     float: left;
@@ -1173,6 +1169,42 @@ input[type="submit"]:hover {
 	background: url("imagens/botao-ok-trab-conosco-hoover-on.jpg") no-repeat scroll 0 0 rgba(0, 0, 0, 0) !important;
 }
 
+
+.widget_extended-categories h1.widget-title {
+	display: none;
+}
+
+.widget_extended-categories {
+	margin: 1.5em 0 0.5em 2em !important;
+	}
+
+#autores-categorias {
+    min-height: 40px;
+    width: 280px;
+}
+
+#conteudo-ocirco {
+    color: #1e0400;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+
+#mostra {
+    background: url("imagens/blog_cat_autores.jpg") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    cursor: pointer;
+    display: block;
+    text-indent: -9999px;
+	color: #FFF;
+    height: 40px;
+    width: 280px;
+}
+
+#oculto {
+    display: none;
+}
+
+
 @media screen and (max-width: 480px) {
 
  .main-small-navigation .menu {
@@ -1189,4 +1221,15 @@ input[type="submit"]:hover {
  .menu-toggle {
   display: none;
  }
+
+
+.main-navigation li {
+	max-width: 200px;
+}
+
+.main-navigation ul.nav-menu, .main-navigation div.nav-menu > ul {
+ 	height: 35px;
+    overflow: hidden;
+}
+
 }

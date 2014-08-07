@@ -1,8 +1,8 @@
 <?php
 /**
 * Module Name: Google+ Profile
-* Module Description: Show a link to your Google+ in the sharing area of your posts and add your blog URL to your Google+ profile.
-* Sort Order: 10
+* Module Description: Give users the ability to share posts to Google+, and add your site link to your Google+ profile.
+* Sort Order: 18
 * First Introduced: 2.5
 * Requires Connection: Yes
 * Auto Activate: Yes
@@ -14,10 +14,12 @@ add_action( 'init', 'jetpack_init_gplus_authorship' );
 
 class GPlus_Authorship {
 
+	private $byline_displayed = false;
+
 	function __construct() {
 		$this->in_jetpack = ( defined( 'IS_WPCOM' ) && IS_WPCOM ) ? false : true;
 		if ( $this->in_jetpack ) {
-			require "gplus-authorship/admin/ui.php";
+			require dirname( __FILE__ ) . "/gplus-authorship/admin/ui.php";
 			$gplus_admin = new GPlus_Authorship_Admin;
 			add_action( 'save_post', array( 'GPlus_Authorship_Admin', 'save_post_meta' ) );
 			add_action( 'wp_ajax_save_gplus_profile_data', array( $this, 'save_profile_data' ) );
@@ -32,14 +34,16 @@ class GPlus_Authorship {
 
 	function show_on_this_post() {
 		global $post;
-		$show = apply_filters( 'gplus_authorship_show', true, $post );
+		if ( ! apply_filters( 'gplus_authorship_show', true, $post ) ) {
+			return false;
+		}
 		$author = $this->information( $post->post_author );
 		if ( empty( $author ) )
-			$show = false;
+			return false;
 		$meta = get_post_meta( $post->ID, 'gplus_authorship_disabled', true );
 		if ( isset( $meta ) && true == $meta )
-			$show = false;
-		return $show;
+			return false;
+		return true;
 	}
 
 	function information( $author ) {
@@ -57,47 +61,27 @@ class GPlus_Authorship {
 			return $content;
 		if ( !$this->show_on_this_post() ) // G+ isn't enabled
 			return $content;
+		if ( ! is_main_query() || ! in_the_loop() )
+			return $content;
 		return preg_replace_callback( '#<a\s+[^>]+>#i', array( $this, 'rel_callback' ), $content );
 	}
 
 	function rel_callback( $link ) {
 		$link = $link[0]; // preg replace returns as array
 
-		$dom = new DOMDocument;
-		$link = mb_convert_encoding( $link, 'HTML-ENTITIES', 'UTF-8' );
-		@$dom->loadHTML( "<html><body>$link</a></body></html>" );
-		$link_node = false;
-		foreach ( $dom->childNodes as $child ) {
-			if ( XML_ELEMENT_NODE === $child->nodeType && 'html' === strtolower( $child->tagName ) ) {
-				$link_node = $child->firstChild->firstChild;
-				break;
-			}
-		}
+		// See if the link contains a rel="author ..." attribute, and if so, remove the author part
+		$link = preg_replace_callback( '/rel\s*=\s*("|\').*author[^"\']*("|\')/i', array( $this, 'rel_attr_callback' ), $link );
 
-		// Don't bother if it's not actually a link (pointing to another document) or if there is no rel attribute.
-		if ( !$link_node )
-			return $link;
-		if ( !$link_node->hasAttribute( 'href' ) )
-			return $link;
-		if ( !$link_node->hasAttribute( 'rel' ) )
-			return $link;
+		// See if we have an empty rel attribute now and remove it if need be
+		$link = preg_replace( '/rel\s*=\s*("|\')\s*("|\')\s*/i', '', $link );
 
-		$rels = explode( ' ', $link_node->getAttribute( 'rel' ) );
-
-		// delete 'author' from the list
-		if ( ( $key = array_search( 'author', $rels ) ) !== false ) {
-			unset( $rels[$key] );
-		}
-
-		// if there was more then one part of the attribute, set the new value, otherwise just get rid of the attribute all together
-		if ( count( $rels ) > 0 )
-			$link_node->setAttribute( 'rel', join( ' ', $rels ) );
-		else
-			$link_node->removeAttribute( 'rel' );
-
-		$link = $dom->saveXML( $link_node );
-		$link = rtrim( $link, '/>' ) . '>';
 		return $link;
+	}
+
+	function rel_attr_callback( $attr ) {
+		$attr = $attr[0];
+		$attr = preg_replace( '/author\s*/i', '', $attr );
+		return $attr;
 	}
 
 	/**
@@ -109,7 +93,7 @@ class GPlus_Authorship {
 		if ( !is_numeric( $_POST['id'] ) )
 			return;
 		$connections = get_option( 'gplus_authors', array() );
-		$connections[ $current_user->ID ]['name'] = $_POST['name'];
+		$connections[ $current_user->ID ]['name'] = stripslashes( $_POST['name'] );
 		$connections[ $current_user->ID ]['id'] = $_POST['id'];
 		$connections[ $current_user->ID ]['url'] = esc_url_raw( $_POST['url'] );
 		$connections[ $current_user->ID ]['profile_image'] = esc_url_raw( $_POST['profile_image'] );
@@ -126,13 +110,16 @@ class GPlus_Authorship {
 		if ( !$this->show_on_this_post() )
 			return $author_name;
 
+		if ( ! is_main_query() || ! in_the_loop() )
+			return $author_name;
+
 		$author = $this->information( $post->post_author );
 		return esc_html( $author['name'] );
 	}
 
 	function byline( $post ) {
 		$author = $this->information( $post->post_author );
-		$image = '<img src="' . esc_url( $author['profile_image'] ) . '?sz=40" alt="" width="20" height="20" align="absmiddle" /> ';
+		$image = '<img src="' . esc_url( $author['profile_image'] ) . '?sz=40" alt="' . esc_attr( $author['name'] ) . '" width="20" height="20" align="absmiddle" /> ';
 		$byline = sprintf( '<a href="%1$s">%2$s</a><a rel="author" href="%1$s" class="gplus-profile">%3$s</a>', esc_url( $author['url'] ), $image, esc_html( $author['name'] ) );
 		return apply_filters( 'gplus_authorship_byline', $byline, $post );
 	}
@@ -163,10 +150,13 @@ class GPlus_Authorship {
 
 	function post_output_wrapper( $text = '', $echo = false ) {
 		global $post, $wp_current_filter;
-
+		if ( true == get_option( 'hide_gplus', false ) )
+			return $text;
 		if ( !is_single() )
 			return $text;
 		if  ( get_post_type() != 'post' )
+			return $text;
+		if ( true === $this->byline_displayed )
 			return $text;
 		$author = $this->information( $post->post_author );
 		if ( empty( $author ) )
@@ -186,6 +176,9 @@ class GPlus_Authorship {
 		if ( !$this->show_on_this_post())
 			return $text;
 
+		if ( ! is_main_query() || ! in_the_loop() )
+			return $text;
+
 		$output = '';
 		$output .= '<div class="sharedaddy sd-block sd-social sd-gplus">';
 		$output .= '<h3 class="sd-title">' . __( 'Google+', 'jetpack' ) . '</h3>';
@@ -194,6 +187,8 @@ class GPlus_Authorship {
 		$output .= $this->follow_button( $post );
 		$output .= '</div>';
 		$output .= '</div>';
+
+		$this->byline_displayed = true;
 
 		if ( $echo )
 			echo $text . $output;

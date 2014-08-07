@@ -19,7 +19,9 @@ function shortcode_handler_bandcamp( $atts ) {
 		'width'			=> null,		// integer with optional "%"
 		'height'		=> null,		// integer with optional "%"
 		'notracklist'	=> null,		// may be string "true" (defaults false)
-		'artwork'		=> null,		// may be string "false" (defaults true)
+		'tracklist'		=> null,		// may be string "false" (defaults true)
+		'artwork'		=> null,		// may be string "false" (alternately: "none") or "small" (default is large)
+		'minimal'		=> null,		// may be string "true" (defaults false)
 		'theme'			=> null,		// may be theme identifier string ("light"|"dark" so far)
 		'package'		=> null,		// integer package id
 		't'				=> null			// integer track number
@@ -48,24 +50,26 @@ function shortcode_handler_bandcamp( $atts ) {
 	// do with an IE-only flash bug which required this URL
 	// to contain no querystring
 
-	$url = "http://bandcamp.com/EmbeddedPlayer/v=2/";
+	if ( !isset( $attributes['album'] ) && !isset( $attributes['track'] ) ) {
+		return "[bandcamp: shortcode must include track or album id]";
+	}
+
+	$url = "//bandcamp.com/EmbeddedPlayer/v=2";
 	if ( isset( $attributes['track'] ) ) {
 		$track = (int) $attributes['track'];
-		$url .= "track={$track}";
+		$url .= "/track={$track}";
+	}
+	if ( isset( $attributes['album'] ) ) {
+		$album = (int) $attributes['album'];
+		$url .= "/album={$album}";
+	}
 
-		if ( $sizekey == 'tall' ) {
+	if ( $sizekey == 'tall' ) {
+		if ( isset( $attributes['album'] ) ) {
+			$sizekey .= '_album';
+		} else {
 			$sizekey .= '_track';
 		}
-	} elseif ( isset( $attributes['album'] ) ) {
-		$album = (int) $attributes['album'];
-		$url .= "album={$album}";
-		$type = 'album';
-
-		if ( $sizekey == 'tall' ) {
-			$sizekey .= '_album';
-		}
-	} else {
-		return "[bandcamp: shortcode must include track or album id]";
 	}
 
 	// if size specified that we don't recognize, fall back on venti
@@ -126,8 +130,25 @@ function shortcode_handler_bandcamp( $atts ) {
 		$url .= "/notracklist=true";
 	}
 
-	if ( $attributes['artwork'] == "false" ) {
-		$url .= "/artwork=false";
+	// 'tracklist' arg deprecates 'notracklist=true' to be less weird.  note, behavior
+	// if both are specified is undefined
+	switch ( $attributes['tracklist'] ) {
+		case "false":
+		case "none":
+			$url .= "/tracklist=false";
+			break;
+	}
+
+	switch ( $attributes['artwork'] ) {
+		case "false":
+		case "none":
+		case "small":
+			$url .= "/artwork=" . $attributes['artwork'];
+			break;
+	}
+
+	if ( $attributes['minimal'] == "true" ) {
+		$url .= "/minimal=true";
 	}
 
 	if ( isset( $attributes['theme'] ) && preg_match( "|^[a-zA-Z_]+$|", $attributes['theme'] ) ) {

@@ -29,8 +29,20 @@
 			<?php if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
 			<div class="widget-area-blog" role="complementary">
 				<?php dynamic_sidebar( 'sidebar-2' ); ?>
-			</div><!-- .widget-area-blog -->
-		<?php endif; ?>
+				<?php endif; ?>
+
+			<div id="autores-categorias">
+				<div id="conteudo">
+				<h3 id="mostra">Exibir e Ocultar</h3>
+				</div>
+				<div id="oculto">
+					<?php if ( is_active_sidebar( 'sidebar-autores' ) ) : ?>
+					<?php dynamic_sidebar( 'sidebar-autores' ); ?>
+					<?php endif; ?>
+				</div>
+				</div>
+		</div><!-- .widget-area-blog -->
+
 	</div><!-- Post Query HOme -->
 
 
