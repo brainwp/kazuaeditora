@@ -45,5 +45,3 @@
 
 	</div><!-- Post Query HOme -->
 
-
-
