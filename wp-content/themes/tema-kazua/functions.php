@@ -5,10 +5,9 @@
  * @since Twenty Twelve 1.0
  */
 /*
- * Apaga a barra de administração qunado logado
+ * Apaga a barra de administração quando logado
  */
-
-add_filter('show_admin_bar', '__return_false'); 
+//add_filter('show_admin_bar', '__return_false'); 
 
 // Função para usar o Thickbox nativo do WP no tema Portfolio Brasa
 function add_themescript(){
@@ -40,6 +39,11 @@ function temazakua_setup() {
 	register_nav_menu( 'academicos-psicologia', __( 'Acadêmicos - Psicologia', 'twentytwelve' ) );
 	register_nav_menu( 'academicos-educacao', __( 'Acadêmicos - Educação ', 'twentytwelve' ) );
 	register_nav_menu( 'academicos-critica-social', __( 'Acadêmicos - Critica Social ', 'twentytwelve' ) );
+	// Adiciona suporte à Resumo nas Páginas
+	add_post_type_support( 'page', 'excerpt');
+	// Adiciona tamanho de thumbnail
+	add_image_size( 'thumb-academicos',250, 180);
+
 }
 add_action( 'after_setup_theme', 'temazakua_setup' );
 
@@ -153,7 +157,4 @@ function ilc_cpt_custom_column($column_name, $post_id) {
     }
     else echo '<i>Nenhum status de autor.</i>';
 }
-// Adiciona suporte à Resumo nas Páginas
-add_post_type_support( 'page', 'excerpt');
-// Adiciona tamanho de thumbnail
-add_image_size( 'thumb-academicos',250, 180);
+
