@@ -39,6 +39,8 @@ get_header(); ?>
 				<?php } ?>
 
 			<?php endwhile; // end of the loop. ?>
+            <?php //ajax div ?>
+            <div id="ajax-menu-load-div" data-ajax="true"></div>
 
 		</div><!-- #content -->
 	</div><!-- #primary -->
