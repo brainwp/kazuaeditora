@@ -61,13 +61,18 @@ class Menu_Ajax_Field {
         // Check if element is properly sent
         if ( is_array( $_REQUEST['menu-item-ajax']) ) {
             $_value = $_REQUEST['menu-item-ajax'][$menu_item_db_id];
-            echo $menu_item_db_id . '<br><br>';
             global $wpdb;
             $_table = 'wp_postmeta';
             if (is_multisite()) {
                 $_table = 'wp_' . get_current_blog_id() . '_postmeta';
             }
-            $wpdb->update($_table, array('meta_value' => $_value), array('post_id' => $menu_item_db_id, 'meta_key' => 'is_menu_ajax'));
+            $_meta = get_post_meta($menu_item_db_id, 'is_menu_ajax', true);
+            if( empty($_meta) ){
+                $wpdb->insert( $_table, array('post_id' => $menu_item_db_id, 'meta_key' => 'is_menu_ajax', 'meta_value' => $_value) );
+            }
+            else{
+                $wpdb->update($_table, array('meta_value' => $_value), array('post_id' => $menu_item_db_id, 'meta_key' => 'is_menu_ajax'));
+            }
         }
 
     }
