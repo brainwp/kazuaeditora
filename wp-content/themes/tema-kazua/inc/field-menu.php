@@ -17,18 +17,6 @@ class Menu_Ajax_Field {
      */
     function __construct() {
 
-        // add custom menu fields to menu
-        add_filter( 'wp_setup_nav_menu_item', array( $this, 'rc_scm_add_custom_nav_fields' ) );
-
-        // save menu custom fields
-        add_action( 'wp_update_nav_menu_item', array( $this, 'save_nav'), 10, 3 );
-
-        // edit menu walker
-        add_filter( 'wp_edit_nav_menu_walker', array( $this, 'rc_scm_edit_walker'), 10, 2 );
-
-        //add data attr
-        add_filter( 'nav_menu_link_attributes', array( $this, 'add_data_attr'), 10, 3 );
-
         add_filter( 'template_redirect', array( $this, 'ajax_loader' ) );
 
     } // end constructor
@@ -108,7 +96,7 @@ class Menu_Ajax_Field {
     }
 }
 
-include_once get_stylesheet_directory() . '/inc/field-edit_custom_walker.php';
+//include_once get_stylesheet_directory() . '/inc/field-edit_custom_walker.php';
 new Menu_Ajax_Field();
 
 //include_once( 'custom_walker.php' );

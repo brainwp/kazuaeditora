@@ -3,9 +3,8 @@
  */
 (function ($) {
     'use strict';
-    $('.nav-menu li a').on('click',function(e){
-        var _attr = $(this).attr('data-menu-ajax');
-        if($('#ajax-menu-load-div').attr('data-ajax') == 'true' && _attr == 'true'){
+    $('.is-menu-ajax a').on('click',function(e){
+        if($('#ajax-menu-load-div').attr('data-ajax') == 'true'){
             e.preventDefault();
             var _href = $(this).attr('href') + '?AjaxMenuLoader=true';
             $('#ajax-menu-load-div').load(_href);
