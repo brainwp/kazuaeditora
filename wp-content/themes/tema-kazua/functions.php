@@ -63,6 +63,7 @@ function temakazua_widgets_init() {
 }
 add_action( 'widgets_init', 'temakazua_widgets_init' );
 
+
 /**
  * Load CPT Portfolios.
  */
@@ -156,4 +157,3 @@ function ilc_cpt_custom_column($column_name, $post_id) {
 add_post_type_support( 'page', 'excerpt');
 // Adiciona tamanho de thumbnail
 add_image_size( 'thumb-academicos',250, 180);
-
