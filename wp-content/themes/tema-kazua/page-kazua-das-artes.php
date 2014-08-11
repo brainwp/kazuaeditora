@@ -40,7 +40,7 @@ get_header(); ?>
 
 			<?php endwhile; // end of the loop. ?>
             <?php //ajax div ?>
-            <div id="ajax-menu-load-div" data-ajax="true" data-load-image="<?php bloginfo('template_url'); ?>/imagens/ajax-loader.gif"></div>
+            <div id="ajax-menu-load-div" data-ajax="true" data-load-image="<?php echo get_stylesheet_directory_uri() ?>/imagens/ajax-loader.gif"></div>
 
 		</div><!-- #content -->
 	</div><!-- #primary -->
