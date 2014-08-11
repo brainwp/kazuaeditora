@@ -7,7 +7,13 @@
         if($('#ajax-menu-load-div').attr('data-ajax') == 'true'){
             e.preventDefault();
             var _href = $(this).attr('href') + '?AjaxMenuLoader=true';
-            $('#ajax-menu-load-div').load(_href);
+            var _img =  $(this).attr('data-load-image');
+
+            $('#ajax-menu-load-div').append('<img src="' + _img + '">');
+            $.get(_href, function( data ) {
+                $('#ajax-menu-load-div').html(data);
+            });
+
         }
     })
 }(jQuery));
