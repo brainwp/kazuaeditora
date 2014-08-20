@@ -32,10 +32,8 @@ get_header(); ?>
 				</nav><!-- #site-navigation -->
 				
 			  <?php if (is_page( 'zungueira-da-kazua-distribuidora-e-divulgadora' ) ) { ?>
-				<p class="nocomments"> </p>
-				<?php } else { ?>
-				<?php get_template_part( 'content', 'page' ); ?>
-				<?php } ?>
+ 				<div id="ajax-menu-load-div" data-ajax="true" data-load-image="<?php echo get_stylesheet_directory_uri() ?>/imagens/ajax-loader.gif"></div>
+			<?php } ?>
 
 
 			<?php endwhile; // end of the loop. ?>

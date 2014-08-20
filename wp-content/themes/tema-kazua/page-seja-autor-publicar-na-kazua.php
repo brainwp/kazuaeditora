@@ -53,9 +53,7 @@ get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 				
 				<?php if (is_page( '4476' ) ) { ?>
-				<!-- <h1 class="entry-title"><?php // the_title(); ?></h1> -->
-				<?php } else { ?>
-				<?php get_template_part( 'content', 'page' ); ?>
+            <div id="ajax-menu-load-div" data-ajax="true" data-load-image="<?php echo get_stylesheet_directory_uri() ?>/imagens/ajax-loader.gif"></div>
 				<?php } ?>
 
 			<?php endwhile; // end of the loop. ?>
