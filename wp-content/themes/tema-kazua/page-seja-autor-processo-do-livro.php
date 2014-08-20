@@ -3,7 +3,7 @@
  * @package WordPress
  * @subpackage Twenty_Twelve
  * @since Twenty Twelve 1.0
- * Template name: Seja Autor
+ * Template name: Seja Autor - Processo do Livro
  */
 
 get_header(); ?>
@@ -24,21 +24,28 @@ get_header(); ?>
 		<?php echo $content_seja_autor; ?>
 		</div><!-- .entry-content -->
 
-	<!-- Final Seja Autor -->
-
-			<?php while ( have_posts() ) : the_post(); ?>
-				
 				<nav id="template-navigation" class="main-navigation" role="navigation">
 					<?php wp_nav_menu( array( 'menu' => 'seja-autor', 'menu_class' => 'nav-menu' ) ); ?>
 				</nav><!-- #site-navigation -->
 
-				<?php if (is_page( 'seja-autor' ) ) { ?>
-				<img src="<?php bloginfo('stylesheet_directory'); ?>/imagens/sj_orig.jpg" width="100%" height="auto" alt="" />
-				<?php } else { ?>
-				 <div id="ajax-menu-load-div" data-ajax="true" data-load-image="<?php echo get_stylesheet_directory_uri() ?>/imagens/ajax-loader.gif"></div>
-				<?php } ?>
 
-			<?php endwhile; // end of the loop. ?>
+	<!-- Final Seja Autor -->
+
+<!-- Chama página Modos de Publicação -->
+
+		<?php
+		$processo_livro = get_page_by_title( 'O Processo do Livro' );
+		$content_processo_livro = apply_filters('the_content', $processo_livro->post_content);
+		?>
+		<header class="entry-header">
+		<h1 class="entry-title"><?php echo $processo_livro->post_title; ?></h1>
+		</header>
+		<div class="entry-content">
+		<?php echo $content_processo_livro; ?>
+		</div><!-- .entry-content -->
+
+	<!-- Final Modos de Publicação -->
+
 
 		</div><!-- #content -->
 	</div><!-- #primary -->

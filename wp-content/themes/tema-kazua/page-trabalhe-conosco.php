@@ -33,12 +33,13 @@ get_header(); ?>
 				</nav><!-- #site-navigation -->
 
 				<?php if (is_page( 'trabalhe-conosco' ) ) { ?>
-				<a href="<?php echo esc_url( home_url( 'editora-kazua/trabalhe-conosco-formulario' ) ); ?>">
+
+		 <div id="ajax-menu-load-div" data-ajax="true" data-load-image="<?php echo get_stylesheet_directory_uri() ?>/imagens/ajax-loader.gif"></div>
+			
+	<a href="<?php echo esc_url( home_url( 'editora-kazua/trabalhe-conosco-formulario' ) ); ?>">
 					<div id="botao-trabalhe-conosco">
 					</div>
 				</a>
-				<?php } else { ?>
-				<?php get_template_part( 'content', 'page' ); ?>
 				<?php } ?>
 
 

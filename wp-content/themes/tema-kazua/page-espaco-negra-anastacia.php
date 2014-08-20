@@ -36,9 +36,7 @@ get_header(); ?>
 			</nav><!-- #site-navigation -->
 
   				<?php if (is_page( 'espaco-negra-anastacia-de-novos-autores' ) ) { ?>
-				<p class="nocomments"> </p>
-				<?php } else { ?>
-				<?php get_template_part( 'content', 'page' ); ?>
+				<div id="ajax-menu-load-div" data-ajax="true" data-load-image="<?php echo get_stylesheet_directory_uri() ?>/imagens/ajax-loader.gif"></div>
 				<?php } ?>
 
 

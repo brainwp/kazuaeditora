@@ -8,7 +8,7 @@
 
 get_header(); ?>
 
-	<div id="primary" class="site-content">
+	<div id="primary" class="site-content full-width">
 		<div id="content" role="main">
 
 	<!-- Chama página Kazuá das Artes -->
@@ -20,7 +20,7 @@ get_header(); ?>
 		<header class="entry-header">
 		<h1 class="entry-title"><?php echo $kazua_das_artes->post_title; ?></h1>
 		</header>
-		<div class="entry-content">
+		<div class="entry-content	">
 		<?php echo $content_kazua_das_artes; ?>
 		</div><!-- .entry-content -->
 
@@ -33,18 +33,13 @@ get_header(); ?>
 				</nav><!-- #site-navigation -->
 
 				<?php if (is_page( 'kazua-das-artes' ) ) { ?>
-				<p class="nocomments"> </p>
-				<?php } else { ?>
-				<?php get_template_part( 'content', 'page' ); ?>
+
+            <div id="ajax-menu-load-div" data-ajax="true" data-load-image="<?php echo get_stylesheet_directory_uri() ?>/imagens/ajax-loader.gif"></div>
+
 				<?php } ?>
 
 			<?php endwhile; // end of the loop. ?>
-            <?php //ajax div ?>
-            <div id="ajax-menu-load-div" data-ajax="true" data-load-image="<?php echo get_stylesheet_directory_uri() ?>/imagens/ajax-loader.gif"></div>
 
 		</div><!-- #content -->
 	</div><!-- #primary -->
-	<div id="secondary" class="widget-area" role="complementary">
-		<?php get_sidebar('interno'); ?>
-	</div>
 <?php get_footer(); ?>
