@@ -3,7 +3,7 @@
  * @package WordPress
  * @subpackage Twenty_Twelve
  * @since Twenty Twelve 1.0
- * Template name: Seja Autor
+ * Template name: Seja Autor - Envie seu Original
  */
 
 get_header(); ?>
@@ -24,21 +24,28 @@ get_header(); ?>
 		<?php echo $content_seja_autor; ?>
 		</div><!-- .entry-content -->
 
-	<!-- Final Seja Autor -->
-
-			<?php while ( have_posts() ) : the_post(); ?>
-				
 				<nav id="template-navigation" class="main-navigation" role="navigation">
 					<?php wp_nav_menu( array( 'menu' => 'seja-autor', 'menu_class' => 'nav-menu' ) ); ?>
 				</nav><!-- #site-navigation -->
 
-				<?php if (is_page( 'seja-autor' ) ) { ?>
-				<img src="<?php bloginfo('stylesheet_directory'); ?>/imagens/sj_orig.jpg" width="100%" height="auto" alt="" />
-				<?php } else { ?>
-				 <div id="ajax-menu-load-div" data-ajax="true" data-load-image="<?php echo get_stylesheet_directory_uri() ?>/imagens/ajax-loader.gif"></div>
-				<?php } ?>
 
-			<?php endwhile; // end of the loop. ?>
+	<!-- Final Seja Autor -->
+
+<!-- Chama página Modos de Publicação -->
+
+		<?php
+		$envie_original = get_page_by_title( 'Envie o seu original' );
+		$content_envie_original = apply_filters('the_content', $envie_original->post_content);
+		?>
+		<header class="entry-header">
+		<h1 class="entry-title"><?php echo $envie_original->post_title; ?></h1>
+		</header>
+		<div class="entry-content">
+		<?php echo $content_envie_original; ?>
+		</div><!-- .entry-content -->
+
+	<!-- Final Modos de Publicação -->
+
 
 		</div><!-- #content -->
 	</div><!-- #primary -->

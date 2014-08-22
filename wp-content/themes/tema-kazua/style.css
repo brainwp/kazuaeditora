@@ -470,6 +470,16 @@ a.btn-compre {
 #nav-below {
 	display: block;
     height: 20px;
+	margin-top: 25px;
+    margin-bottom: 10px;
+    width: auto;
+}
+
+.nav-single {
+
+	display: block;
+    height: 20px;
+	margin-top: 30px;
     margin-bottom: 10px;
     width: auto;
 }
@@ -716,6 +726,14 @@ body.page-template-page-estudos-academicos-critica-social-php .site-content {
 
 body.page-template-page-estudos-academicos-educacao-php .site-content {
     width: 100%;
+}
+
+body.page-template-page-kazua-das-artes-php .site-content {
+    width: 100%;
+}
+
+.menu-kazua-das-artes-container {
+	margin-bottom: 55px;
 }
 
 .archive-meta {
