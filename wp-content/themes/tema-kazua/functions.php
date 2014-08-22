@@ -18,7 +18,9 @@ function add_themescript()
         wp_enqueue_script('thickbox', null, array('jquery'));
         wp_enqueue_style('thickbox.css', '/' . WPINC . '/js/thickbox/thickbox.css', null, '1.0');
         wp_enqueue_script('ajax-menu-loader-js', get_stylesheet_directory_uri(). '/js/ajax-menu-loader.js', array(), '20120206', true);
+	    if(is_single('kazua-das-artes')){
 
+	    }
     }
 }
 
