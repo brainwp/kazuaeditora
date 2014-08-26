@@ -31,7 +31,7 @@ function add_themescript()
 		    $require_name_email   = intval( get_option( 'require_name_email' ) );
 		    $is_logged_in = is_user_logged_in();
 		    $localize_strings = array(
-			    'widths'               => 370,700,1000,1200,1400,2000,
+			    //'widths'               => 370,700,1000,1200,1400,2000,
 			    'is_logged_in'         => $is_logged_in,
 			    'lang'                 => strtolower( substr( get_locale(), 0, 2 ) ),
 			    'ajaxurl'              => set_url_scheme( admin_url( 'admin-ajax.php' ) ),
@@ -54,8 +54,8 @@ function add_themescript()
 			    'aperture'             => __( 'Aperture', 'jetpack' ),
 			    'shutter_speed'        => __( 'Shutter Speed', 'jetpack' ),
 			    'focal_length'         => __( 'Focal Length', 'jetpack' ),
-			    // 'comment_registration' => $comment_registration,
-			    // 'require_name_email'   => $require_name_email,
+			    'comment_registration' => $comment_registration,
+			    'require_name_email'   => $require_name_email,
 			    'login_url'            => wp_login_url( apply_filters( 'the_permalink', get_permalink() ) ),
 		    );
 
@@ -65,18 +65,7 @@ function add_themescript()
 			    if ( $is_logged_in ) {
 				    $localize_strings['local_comments_commenting_as'] = '<p id="jp-carousel-commenting-as">' . sprintf( __( 'Commenting as %s', 'jetpack' ), $current_user->data->display_name ) . '</p>';
 			    } else {
-				    if ( $comment_registration ) {
-					    $localize_strings['local_comments_commenting_as'] = '<p id="jp-carousel-commenting-as">' . __( 'You must be <a href="#" class="jp-carousel-comment-login">logged in</a> to post a comment.', 'jetpack' ) . '</p>';
-				    } else {
-					    $required = ( $require_name_email ) ? __( '%s (Required)', 'jetpack' ) : '%s';
-					    $localize_strings['local_comments_commenting_as'] = ''
-					                                                        . '<fieldset><label for="email">' . sprintf( $required, __( 'Email', 'jetpack' ) ) . '</label> '
-					                                                        . '<input type="text" name="email" class="jp-carousel-comment-form-field jp-carousel-comment-form-text-field" id="jp-carousel-comment-form-email-field" /></fieldset>'
-					                                                        . '<fieldset><label for="author">' . sprintf( $required, __( 'Name', 'jetpack' ) ) . '</label> '
-					                                                        . '<input type="text" name="author" class="jp-carousel-comment-form-field jp-carousel-comment-form-text-field" id="jp-carousel-comment-form-author-field" /></fieldset>'
-					                                                        . '<fieldset><label for="url">' . __( 'Website', 'jetpack' ) . '</label> '
-					                                                        . '<input type="text" name="url" class="jp-carousel-comment-form-field jp-carousel-comment-form-text-field" id="jp-carousel-comment-form-url-field" /></fieldset>';
-				    }
+				    $localize_strings['local_comments_commenting_as'] = '<p id="jp-carousel-commenting-as">' . __( 'You must be <a href="#" class="jp-carousel-comment-login">logged in</a> to post a comment.', 'jetpack' ) . '</p>';
 			    }
 		    }
 		    $localize_strings = apply_filters( 'jp_carousel_localize_strings', $localize_strings );
