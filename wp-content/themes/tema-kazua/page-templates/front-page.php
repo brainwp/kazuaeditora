@@ -15,9 +15,9 @@ get_header(); ?>
 	<div class="site-content-front">
 		
 		<div id="header-negra-anastacia">
-			<a href="<?php echo esc_url( home_url( '/espaco-negra-anastacia-de-novos-autores' ) ); ?>">
+			<a href="<?php echo esc_url( home_url( '/espaco-negra-anastacia-de-criacao-literaria' ) ); ?>">
 			<div class="imagem-destaque">
-				<img src="<?php bloginfo('stylesheet_directory'); ?>/imagens/logo-negra-anastacia-final.gif" width="100%" height="auto" alt="" />
+				<img src="<?php bloginfo('stylesheet_directory'); ?>/imagens/logo-espaco-negra-anastacia-de-criacao-literaria.jpg" width="100%" height="auto" alt="" />
 			</div>
 			<div class="texto-imagem-destaque">
 				<img src="<?php bloginfo('stylesheet_directory'); ?>/imagens/botao-na-03.jpg" width="100%" height="auto" alt="" />

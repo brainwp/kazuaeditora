@@ -14,7 +14,7 @@ get_header(); ?>
 		<!-- Chama página Zungueira -->
 
 		<?php
-		$negra_anastacia = get_page_by_title( 'Espaço Negra Anastacia de Novos Autores' );
+		$negra_anastacia = get_page_by_title( 'Espaço Negra Anastacia de Criaçao Literaria' );
 		$content_negra_anastacia = apply_filters('the_content', $negra_anastacia->post_content);
 		?>
 		<header class="entry-header">
