@@ -35,7 +35,7 @@ get_header(); ?>
 			<?php wp_nav_menu( array( 'menu' => 'espaco-negra-anastacia', 'menu_class' => 'nav-menu' ) ); ?>
 			</nav><!-- #site-navigation -->
 
-  				<?php if (is_page( 'espaco-negra-anastacia-de-novos-autores' ) ) { ?>
+  				<?php if (is_page( 'espaco-negra-anastacia-de-criacao-literaria' ) ) { ?>
 				<div id="ajax-menu-load-div" data-ajax="true" data-load-image="<?php echo get_stylesheet_directory_uri() ?>/imagens/ajax-loader.gif"></div>
 				<?php } ?>
 
