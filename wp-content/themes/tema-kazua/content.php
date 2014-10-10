@@ -34,11 +34,11 @@
 				<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
 			</h1>
 			<?php endif; // is_single() ?>
-			<a class="thickbox image" 			href="<?php $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 720,405 ), false, '' );echo $src[0];?>">
+			<img class="image" href="<?php $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 720,405 ), false, '' );echo $src[0];?>"/>
 			<?php if ( ! post_password_required() && ! is_attachment() ) :
 				the_post_thumbnail();
 			endif; ?>
-			</a>
+		
 		</header><!-- .entry-header -->
 
 		<?php if ( is_search() ) : // Only display Excerpts for Search ?>
