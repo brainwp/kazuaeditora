@@ -4,6 +4,7 @@ error_log
 wp-config.php
 wp-content/uploads/
 wp-content/upgrade/
+wc-logs/
 
 .vagrant
 Vagrantfile
