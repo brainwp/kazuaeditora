@@ -8,21 +8,26 @@
  * Apaga a barra de administração quando logado
  */
 
-add_filter('show_admin_bar', '__return_false');
+//add_filter('show_admin_bar', '__return_false');
 
 // Função para usar o Thickbox nativo do WP no tema Portfolio Brasa
 function add_themescript()
 {
     if (!is_admin()) {
         wp_enqueue_script('jquery');
-        wp_enqueue_script('thickbox', null, array('jquery'));
-        wp_enqueue_style('thickbox.css', '/' . WPINC . '/js/thickbox/thickbox.css', null, '1.0');
+        wp_enqueue_script(
+            'vgrid-js',
+            get_stylesheet_directory_uri() . '/js/vgrid.js',
+            array('jquery')
+        );
+        //wp_enqueue_script('thickbox', null, array('jquery'));
+        //wp_enqueue_style('thickbox.css', '/' . WPINC . '/js/thickbox/thickbox.css', null, '1.0');
 	    //if(is_single('kazua-das-artes')){
-		    wp_enqueue_style('jetpack-carousel', home_url(). '/wp-content/plugins/jetpack/modules/carousel/jetpack-carousel.css', null, '1.0');
-		    //wp_enqueue_style('jetpack-carousel-css', home_url(). '/wp-content/plugins/jetpack/modules/carousel/jetpack-carousel.css', array(), '20120206', true);
+		//    wp_enqueue_style('jetpack-carousel', home_url(). '/wp-content/plugins/jetpack/modules/carousel/jetpack-carousel.css', null, '1.0');
+		    //wp_enqueue_style('jetpack-carousel-css', hoget_stylesheet_directory_uri()me_url(). '/wp-content/plugins/jetpack/modules/carousel/jetpack-carousel.css', array(), '20120206', true);
 
 		    wp_enqueue_script('ajax-menu-loader-js', get_stylesheet_directory_uri(). '/js/ajax-menu-loader.js', array(), '20120206', true);
-		    wp_enqueue_script('jetpack-carousel', home_url(). '/wp-content/plugins/jetpack/modules/carousel/jetpack-carousel.js', array(), '20120206', true);
+		   // wp_enqueue_script('jetpack-carousel', home_url(). '/wp-content/plugins/jetpack/modules/carousel/jetpack-carousel.js', array(), '20120206', true);
 		    // Note: using  home_url() instead of admin_url() for ajaxurl to be sure  to get same domain on wpcom when using mapped domains (also works on self-hosted)
 		    // Also: not hardcoding path since there is no guarantee site is running on site root in self-hosted context.
 		    // $is_logged_in = is_user_logged_in();
@@ -69,7 +74,7 @@ function add_themescript()
 			    }
 		    }
 		    $localize_strings = apply_filters( 'jp_carousel_localize_strings', $localize_strings );
-		    wp_localize_script( 'jetpack-carousel', 'jetpackCarouselStrings', $localize_strings );
+		   // wp_localize_script( 'jetpack-carousel', 'jetpackCarouselStrings', $localize_strings );
 	    }
     //}
 }
@@ -99,7 +104,8 @@ function temazakua_setup() {
 	add_post_type_support( 'page', 'excerpt');
 	// Adiciona tamanho de thumbnail
 	add_image_size( 'thumb-academicos',250, 180);
-
+    add_image_size( 'content-blog-thumb', 243 );
+    add_image_size( 'blog-destaque', 515, 290, true ); // (cropped)
 }
 
 add_action('after_setup_theme', 'temazakua_setup');
@@ -221,3 +227,7 @@ function ilc_cpt_custom_column($column_name, $post_id)
 
 // Carrega o campo de ajax nos menus
 require get_stylesheet_directory() . '/inc/field-menu.php';
+
+// acf
+//define( 'ACF_LITE', true );
+require get_stylesheet_directory() . '/inc/advanced-custom-fields/acf.php';
