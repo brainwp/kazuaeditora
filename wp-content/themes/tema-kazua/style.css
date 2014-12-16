@@ -1356,6 +1356,7 @@ margin-left: 17px;
 	border:2px solid black;
 	padding-bottom:0;
 	display: block;
+	transition:700ms ease all !important;
 }
 .post-destacado h3{
 	color:white;

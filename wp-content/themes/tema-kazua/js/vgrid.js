@@ -21,7 +21,7 @@
    	    	var _height = $(this).children('.hover-img').attr('height');
    	    	$(this).children('.hover-img').css('width',_width+'px');
    	    	$(this).children('.hover-img').css('height',_height+'px');
-   	    	$(this).children('.default-img').css('display','none');
+   	    	$(this).children('.default-img').hide();
    	    	$(this).children('.hover-img').show();
    	    	//console.log('hi');
    	    });
