@@ -18,7 +18,7 @@ function add_themescript()
         wp_enqueue_script(
             'vgrid-js',
             get_stylesheet_directory_uri() . '/js/vgrid.js',
-            array('jquery')
+            array('jquery'), true
         );
         //wp_enqueue_script('thickbox', null, array('jquery'));
         //wp_enqueue_style('thickbox.css', '/' . WPINC . '/js/thickbox/thickbox.css', null, '1.0');

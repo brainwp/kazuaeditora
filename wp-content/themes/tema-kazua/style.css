@@ -1272,7 +1272,7 @@ input[type="submit"]:hover {
 .space-blog-title{
 	width:100%;
 	clear:both;
-	height:96px;
+	height:74px;
 }
 .content-blog-box{
 	margin-bottom:10px;
@@ -1405,11 +1405,15 @@ margin-left: 17px;
 .fundo-blog #archive-blog-grid{
 	float:left;
 	width:69%;
+	min-height: 400px;
 }
 h1#blog-name{
 color: #000;
 font-weight: 800;
 font-size: 27px;
-padding-top: 20px;
+padding-bottom: 25px;
 padding-left: 10px;
+}
+.grid-sizer{
+	width:30%;
 }
