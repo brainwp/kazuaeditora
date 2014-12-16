@@ -1304,6 +1304,7 @@ input[type="submit"]:hover {
 	color:black;
 	font-family: "Futura Lt Bt","Josefin Sans", Arial, Helvetica, sans-serif;
 	padding:10px;
+	max-width:98%;
 }
 .content-blog-box-footer .leiamais-blog{
 	position: absolute;
@@ -1394,4 +1395,13 @@ margin-left: 17px;
 	float: left;
 	margin-left: -4px;
 	background-size:cover;
+}
+.fundo-blog #secondary{
+	float:left;
+	width:28%;
+	margin-right:19px;
+}
+.fundo-blog #archive-blog-grid{
+	float:left;
+	width:69%;
 }
