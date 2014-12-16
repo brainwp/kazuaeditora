@@ -21,9 +21,18 @@
    	    	var _height = $(this).children('.hover-img').attr('height');
    	    	$(this).children('.hover-img').css('width',_width+'px');
    	    	$(this).children('.hover-img').css('height',_height+'px');
-   	    	//$(this).children('.default-img').css('display','none');
-   	    	$(this).children('.hover-img').show('slow');
+   	    	$(this).children('.default-img').css('display','none');
+   	    	$(this).children('.hover-img').show();
    	    	//console.log('hi');
+   	    });
+   	    $('.post-destacado').on('mouseout',function(){
+   	    	$(this).children('.hover-img').hide();
+   	    	$(this).children('.default-img').show();
+   	    	//console.log('hi');
+   	    });
+   	    $('.post-destacado').each(function(){
+   	    	 var _width = $(this).width();
+   	    	 $(this).children('.footer').css('width',_width -20 + 'px');
    	    });
     });
 }(jQuery));

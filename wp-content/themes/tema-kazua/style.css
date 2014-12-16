@@ -1255,7 +1255,7 @@ input[type="submit"]:hover {
 	width: 100% !important;
 	padding: 39px;
 	background: url("imagens/fundo-blog.png") no-repeat scroll 0% 0% transparent;
-	background-size: 94%;
+	background-size: 95% 100%;
 }
 .mansory-size3 { width: 33.333%; }
 .content-blog-box{
@@ -1272,7 +1272,7 @@ input[type="submit"]:hover {
 .space-blog-title{
 	width:100%;
 	clear:both;
-	height:65px;
+	height:96px;
 }
 .content-blog-box{
 	margin-bottom:10px;
@@ -1313,16 +1313,85 @@ input[type="submit"]:hover {
 	right:0;
 	bottom:10px;
 }
-.post-destacado.principal{
-	width:50%;
-	z-index: 100;
+.destaque-right{
+float: left;
+width: 50%;
+z-index: 100;
+margin-left: 17px;
 }
-.post-destacado.principal img{
+.destaque-left{
+	float:left;
+	width:45%;
+	z-index:100;
+}
+.post-destacado.menor{
 	width:100%;
 }
-.post-destacado.principal .hover-img{
+.post-destacado.menor .default-img{
+	height:180px;
+	width:100%;
+}
+.post-destacado.principal{
+	width:100%;
+	z-index: 100;
+}
+.post-destacado.principal .default-img{
+	height:294px;
+}
+.post-destacado:hover{
+	position: absolute;
+}
+.post-destacado img{
+	width:100%;
+	border-radius:none !important;
+}
+.post-destacado .hover-img{
 	display:none;
 	position: absolute;
 	z-index:20;
-	float:left;
+	border:4px solid red;
+}
+.post-destacado{
+	border:2px solid black;
+	padding-bottom:0;
+	display: block;
+}
+.post-destacado h3{
+	color:white;
+	font-family: "Futura Lt Bt","Josefin Sans", Arial, Helvetica, sans-serif;
+	text-transform: capitalize;
+}
+.post-destacado .footer{
+	position: absolute;
+	width:100%;
+	padding:10px;
+	background:rgba(0,0,0,0.8);
+	margin-top:-42px;
+	font-size:22px;
+	font-weight: 800;
+}
+.post-destacado:hover{
+	border:0;
+}
+.post-destacado:hover .footer{
+	display:none;
+}
+.post-destacado .leiamais-blog-destaque{
+	position: absolute;
+	right:0;
+	width:62px;
+	height:38px;
+	background: url('imagens/leiamais-blog-destaque.png');
+	z-index: 10;
+	margin-top: -33px;
+	margin-right: 10px;
+}
+.destaque-right .revista-banner{
+	height: 114px;
+	background: url("imagens/banner-revista.png") no-repeat scroll 0% 0% / cover transparent;
+	display: block;
+	width: 517px;
+	float: left;
+	margin-left: -4px;
+	background-size:cover;
 }

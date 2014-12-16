@@ -21,15 +21,14 @@ get_header(); ?>
 		<div class="space-blog-title"></div><!-- .space-blog-title -->
 		<?php get_template_part('content','blog-post-destacado'); ?>
 		<?php if ( have_posts() ) : ?>
-		    <div id="archive-blog-grid">
 		    	<?php /* Start the Loop */ ?>
+		    	<div id="archive-blog-grid">
 		    	<?php while ( have_posts() ) : the_post(); ?>
 		    	   <?php get_template_part( 'content', 'blog' ); ?>
 			    <?php endwhile; ?>
-		    </div><!-- #archive-blog-grid -->
+			    </div><!-- #archive-blog-grid -->
 			<?php twentytwelve_content_nav( 'nav-below' ); ?>
         <?php endif; ?>
-
 		<div id="secondary" class="widget-area" role="complementary">
 			<?php get_sidebar('blog'); ?>
 	    </div><!-- #secondary -->
