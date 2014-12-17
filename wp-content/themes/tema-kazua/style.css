@@ -1521,3 +1521,50 @@ margin-bottom: 3px;
 	font-weight: 800;
 	text-transform: uppercase;
 }
+.fundo-blog-single .destaque-sidebar{
+	display:block;
+	width:100%;
+	clear:both;
+	border-radius: 0 !important;
+}
+.fundo-blog-single .destaque-sidebar img{
+	width:100%;
+	max-height: 400px;
+	border-radius: 0 !important;
+	border:2px solid black;
+}
+.fundo-blog-single form#busca-sidebar{
+	width:100%;
+	background:url('imagens/search-form-sidebar.png') no-repeat;
+	background-size:cover;
+	height:49px;
+	clear:both;
+}
+.fundo-blog-single form#busca-sidebar input{
+	display: block;
+	border: medium none;
+	width: 70%;
+	margin-left: 41px;
+	margin-top: 9px;
+	float: left;
+	background:none;
+}
+.fundo-blog-single form#busca-sidebar input{
+	transition:300ms ease all;
+	background:url('imagens/texto-search.png') center center no-repeat;
+	color:rgba(0,0,0,0);
+}
+.fundo-blog-single form#busca-sidebar input:hover, .fundo-blog-single form#busca-sidebar input:focus{
+	background:none;
+	transition:300ms ease all;
+	color:black;
+}
+.fundo-blog-single .revista-banner{
+	display: block;
+	width: 100%;
+	float:left;
+	clear:both;
+}
+.fundo-blog-single .revista-banner img{
+	width:100%;
+}

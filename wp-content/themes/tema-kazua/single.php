@@ -56,7 +56,7 @@ get_header(); ?>
 		</div><!-- .blog-single-left -->
 		<div class="blog-single-right">
 			<div id="secondary" class="widget-area" role="complementary">
-				<?php// get_sidebar('blog'); ?>
+				<?php get_sidebar('blog-single'); ?>
 		    </div><!-- #secondary -->
 		</div><!-- .blog-single-right -->
 	</div><!-- #primary -->
