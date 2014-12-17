@@ -239,3 +239,4 @@ require get_stylesheet_directory() . '/inc/field-menu.php';
 // acf
 //define( 'ACF_LITE', true );
 require get_stylesheet_directory() . '/inc/advanced-custom-fields/acf.php';
+require get_stylesheet_directory() . '/inc/acf-fields.php';

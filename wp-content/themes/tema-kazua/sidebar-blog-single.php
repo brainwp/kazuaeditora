@@ -5,10 +5,9 @@
 $args = array (
 	'post_type'              => 'post',
     'posts_per_page'         => 1,
-    'paged'                  => 2,
    	'meta_query'             => array(
    	   		array(
-    		'key'       => 'destaque_blog_field',
+    		'key'       => 'destaque_blog_field_menor',
     		'value'     => 'true',
     		'compare'   => 'LIKE',
     		)
