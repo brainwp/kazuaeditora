@@ -28,7 +28,7 @@ get_header(); ?>
 			    <?php endwhile; ?>
 			<?php endif; ?>
 			<h3 id="categories-slider">
-				Leia Veja mais notícias sobre: <?php the_category( ',', false, $id ); ?>
+				Veja mais notícias sobre: <?php the_category( ',', false, $id ); ?>
 			</h3>
 		    <div id="slider-container">
 			<?php

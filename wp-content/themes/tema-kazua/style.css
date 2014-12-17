@@ -1509,13 +1509,15 @@ margin-bottom: 3px;
 	background: url('imagens/separador-slick.png') top no-repeat;
 	padding-top:10px;
 	font-weight: 800;
-	font-size:28px;
+	font-size:20px;
 	color:black;
+	padding-top:20px;
+	margin-top:20px;
 }
 .fundo-blog-single h3#categories-slider a{
 	text-decoration: none;
 	color:black;
-	font-size: 28px;
+	font-size: 20px;
 	font-weight: 800;
 	text-transform: uppercase;
 }
