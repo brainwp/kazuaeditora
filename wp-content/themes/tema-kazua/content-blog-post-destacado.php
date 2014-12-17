@@ -79,4 +79,3 @@ wp_reset_postdata();
 <a href="#" class="revista-banner"></a>
 </div><!-- .destaque-right -->
 <div style="clear:both;width:100%;height:20px"></div>
-<h1 id="blog-name">As Últimas Novas da Kasa...</h1><!-- #blog-name -->

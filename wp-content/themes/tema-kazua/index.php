@@ -20,6 +20,7 @@ get_header(); ?>
 
 		<div class="space-blog-title"></div><!-- .space-blog-title -->
 		<?php get_template_part('content','blog-post-destacado'); ?>
+		<h1 id="blog-name">As Últimas Novas da Kasa...</h1><!-- #blog-name -->
 		<?php if ( have_posts() ) : ?>
 		    	<?php /* Start the Loop */ ?>
 		    	<div id="archive-blog-grid">

@@ -225,6 +225,14 @@ function ilc_cpt_custom_column($column_name, $post_id)
     } else echo '<i>Nenhum status de autor.</i>';
 }
 
+function get_categories_array($id){
+    $cats = array();
+    foreach((get_the_category($id)) as $category) {
+        $cats[] = $category->slug;
+    } 
+    return $cats;
+
+}
 // Carrega o campo de ajax nos menus
 require get_stylesheet_directory() . '/inc/field-menu.php';
 
