@@ -14,3 +14,4 @@ sftp-config.json
 *.swp
 *.swo
 *~
+sftp-config.json
