@@ -1328,6 +1328,11 @@ input[type="submit"]:hover {
 	right:0;
 	bottom:10px;
 }
+
+.content-blog-box.cat-query{
+	width:45% !important;
+}
+
 .destaque-right{
 	float: left;
 	width: 50%;
@@ -1433,6 +1438,12 @@ input[type="submit"]:hover {
 	min-height: 400px;
 }
 
+.fundo-blog #archive-grid{
+	float:left;
+	width:80%;
+	min-height: 400px;
+}
+
 h1#blog-name{
 color: #000;
 font-weight: 800;
@@ -1470,6 +1481,7 @@ margin-bottom: 3px;
 	margin-top:71px;
 	margin-left:21px;
 }
+
 .blog-single-right{
 	width: 28%;
 	float: right;
@@ -1479,6 +1491,12 @@ margin-bottom: 3px;
 	width:100%;
 }
 
+.blog-cat-left{
+	width:80%;
+	float:left;
+	margin-top:71px;
+	margin-left:0;
+}
 
 #blog-home.widget-area{
 	float: right;

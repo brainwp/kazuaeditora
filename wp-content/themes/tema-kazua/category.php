@@ -13,9 +13,9 @@
 
 get_header(); ?>
 
-	<section id="primary" class="site-content">
-		
-
+	<div id="primary" class="site-content fundo-blog">
+		<div class="space-blog-title"></div><!-- .space-blog-title -->
+	<div class="blog-cat-left">
 		<?php if ( have_posts() ) : ?>
 			<header class="archive-header">
 				<h1 class="archive-title"><?php printf( __( 'Category Archives: %s', 'twentytwelve' ), '<span>' . single_cat_title( '', false ) . '</span>' ); ?></h1>
@@ -25,33 +25,19 @@ get_header(); ?>
 			<?php endif; ?>
 			</header><!-- .archive-header -->
 			
-		<div id="content" class="fundo-blog" role="main">
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
+		    	<?php /* Start the Loop */ ?>
+		    	<div id="archive-blog-grid">
+		    	<?php while ( have_posts() ) : the_post(); ?>
+		    	   <?php get_template_part( 'content', 'category' ); ?>
+			    <?php endwhile; ?>	
+			<?php endif; ?>
+			</div><!-- #archive-blog-grid -->
 
-			twentytwelve_content_nav( 'nav-below' );
-
-				/* Include the post format-specific template for the content. If you want to
-				 * this in a child theme then include a file called called content-___.php
-				 * (where ___ is the post format) and that will be used instead.
-				 */
-				get_template_part( 'content', get_post_format() );
-
-			endwhile;
-
-			twentytwelve_content_nav( 'nav-below' );
-			?>
-
-		<?php else : ?>
-			<?php get_template_part( 'content', 'none' ); ?>
-		<?php endif; ?>
-
-		</div><!-- #content -->
-	</section><!-- #primary -->
-
+		</div><!-- .blog-single-left -->
+		<div class="blog-single-right">
 	<div id="secondary" class="widget-area" role="complementary">
-	<?php get_sidebar('blog'); ?>
+	<?php get_sidebar('blog-single'); ?>
 	</div>
-
+	</div><!-- .blog-single-right -->
+		</div><!-- #primary -->
 <?php get_footer(); ?>
