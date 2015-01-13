@@ -1615,6 +1615,40 @@ margin-bottom: 3px;
 	transition:300ms ease all;
 	color:black;
 }
+
+
+
+
+form#busca-sidebar{
+	width:100%;
+	background:url('imagens/search-form-sidebar.png') no-repeat;
+	background-size:cover;
+	height:49px;
+	clear:both;
+}
+form#busca-sidebar input{
+	display: block;
+	border: medium none;
+	width: 70%;
+	margin-left: 41px;
+	margin-top: 9px;
+	float: left;
+	background:none;
+}
+form#busca-sidebar input{
+	transition:300ms ease all;
+	background:url('imagens/texto-search.png') center center no-repeat;
+	color:rgba(0,0,0,0);
+}
+form#busca-sidebar input:hover, form#busca-sidebar input:focus{
+	background:none;
+	transition:300ms ease all;
+	color:black;
+}
+
+.tagcloud {
+	
+}
 .fundo-blog-single .revista-banner{
 	display: block;
 	width: 100%;

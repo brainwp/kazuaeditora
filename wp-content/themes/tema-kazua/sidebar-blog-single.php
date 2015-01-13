@@ -17,7 +17,7 @@ $args = array (
 $query = new WP_Query( $args ); ?>
 <?php if ( $query->have_posts() ): ?>
 	<?php while ( $query->have_posts() ): $query->the_post(); ?>
-		<a class="destaque-sidebar">
+		<a href="<?php echo get_permalink($post->ID); ?>" rel="bookmark" alt="<?php the_title(); ?>" class="destaque-sidebar">
 		    <?php the_post_thumbnail('medium'); ?>
 		</a>
 	<?php endwhile; ?>
