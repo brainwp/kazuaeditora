@@ -26,7 +26,7 @@ if ( $query->have_posts() ) {
 		<div class="destaque-left">
 			<a class="post-destacado principal" href="<?php the_permalink(); ?>">
 			<?php the_post_thumbnail('blog-destaque',array('class' => 'default-img')); ?>
-			<?php the_post_thumbnail('large',array('class' => 'hover-img')); ?>
+			<?php the_post_thumbnail('blog-destaque',array('class' => 'hover-img')); ?>
 			<div class="footer">
 				<h3><?php the_title();?></h3>
 				<span class="leiamais-blog-destaque"></span>
@@ -62,7 +62,6 @@ wp_reset_postdata();
     		$query->the_post(); ?>
     		<a class="post-destacado menor" href="<?php the_permalink(); ?>">
     			<?php the_post_thumbnail('blog-destaque',array('class' => 'default-img')); ?>
-    			<?php the_post_thumbnail('large',array('class' => 'hover-img')); ?>
     			<div class="footer">
     				<h3><?php the_title();?></h3>
     				<span class="leiamais-blog-destaque"></span>

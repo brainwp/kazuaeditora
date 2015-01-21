@@ -1334,14 +1334,12 @@ input[type="submit"]:hover {
 }
 
 .destaque-right{
-	float: left;
-	width: 50%;
+	float: right;
 	z-index: 100;
 	margin-left: 17px;
 }
 .destaque-left{
 	float:left;
-	width:45%;
 	z-index:100;
 }
 
@@ -1361,7 +1359,6 @@ input[type="submit"]:hover {
 	border-radius:none !important;
 }
 .post-destacado .hover-img{
-	display:none;
 	position: absolute;
 	z-index:20;
 	border:2px solid red;
@@ -1371,24 +1368,44 @@ input[type="submit"]:hover {
 	max-width:450px;
 	z-index: 100;
 }
+
 .post-destacado.principal .default-img{
-	height:294px;
+	max-height:294px;
+	overlay: hidden;
+	width:450px;
+}
+
+.post-destacado.principal .default-img img {
+	width:100%;
+		height: auto;
+
 }
 
 .post-destacado.principal .hover-img{
-	display:none;
 	z-index:20;
 	border:2px solid red;
+	width:450px !important;
 }
 
+.post-destacado.principal .hover-img img {
+	width:auto;
+	display: block;
+	
+}
 
 .post-destacado.menor{
 	max-width:100%;
 	z-index: 100;
+	display: block;
 }
 .post-destacado.menor .default-img{
 	height:180px;
+	display: block;
 }
+.post-destacado.menor .default-img img {
+	position: abosolute;
+}
+
 
 .post-destacado h3{
 	color:white;
