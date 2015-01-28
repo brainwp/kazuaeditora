@@ -1,4 +1,4 @@
-// JavaScript Document
+// JavaScript for toggle
 	jQuery(document).ready(function() {
        jQuery("h3#mostra").toggle(
            function() {

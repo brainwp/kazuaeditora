@@ -19,8 +19,8 @@
    		}
    	$(document).ready(function() {
    		exec_m();
-   	    //console.log($('body').html());
-   	    //hover destaque
+   	    // console.log($('body').html());
+   	    // hover destaque
    	    $('.post-destacado').on('mouseover',function(){
    	    	var _width = $(this).children('.hover-img').attr('width');
    	    	var _height = $(this).children('.hover-img').attr('height');
@@ -40,7 +40,8 @@
    	    	 $(this).children('.footer').css('width',_width -20 + 'px');
    	    });
    	    exec_m();
-   	    $('#slider-container').slick({
+   	// slider single    
+	$('#slider-container').slick({
    	    	infinite: true,
    	    	slidesToShow: 2,
    	    	slidesToScroll: 1

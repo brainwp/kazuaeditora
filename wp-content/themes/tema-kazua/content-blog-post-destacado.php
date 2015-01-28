@@ -25,8 +25,8 @@ if ( $query->have_posts() ) {
 		$query->the_post(); ?>
 		<div class="destaque-left">
 			<a class="post-destacado principal" href="<?php the_permalink(); ?>">
-			<?php the_post_thumbnail('blog-destaque',array('class' => 'default-img')); ?>
-			<?php the_post_thumbnail('blog-destaque',array('class' => 'hover-img')); ?>
+			<?php the_post_thumbnail('blog-destaque-principal',array('class' => 'default-img')); ?>
+			<?php the_post_thumbnail('blog-destaque-principal',array('class' => 'hover-img')); ?>
 			<div class="footer">
 				<h3><?php the_title();?></h3>
 				<span class="leiamais-blog-destaque"></span>
@@ -60,8 +60,8 @@ wp_reset_postdata();
     if ( $query->have_posts() ) {
     	while ( $query->have_posts() ) {
     		$query->the_post(); ?>
-    		<a class="post-destacado menor" href="<?php the_permalink(); ?>">
-    			<?php the_post_thumbnail('blog-destaque',array('class' => 'default-img')); ?>
+    		<a class="post-destacado-menor" href="<?php the_permalink(); ?>">
+    			<?php the_post_thumbnail('blog-destaque-menor'); ?>
     			<div class="footer">
     				<h3><?php the_title();?></h3>
     				<span class="leiamais-blog-destaque"></span>
@@ -74,6 +74,6 @@ wp_reset_postdata();
 // Restore original Post Data
 wp_reset_postdata();
 ?>
-<a href="#" class="revista-banner"></a>
+<a href="<?php echo esc_url( home_url( '/blog' ) ); ?>" class="revista-banner"></a>
 </div><!-- .destaque-right -->
 <div style="clear:both;width:100%;height:20px"></div>

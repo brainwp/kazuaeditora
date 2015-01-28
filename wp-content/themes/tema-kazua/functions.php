@@ -22,15 +22,15 @@ function add_themescript()
         );
         //wp_enqueue_script('thickbox', null, array('jquery'));
         //wp_enqueue_style('thickbox.css', '/' . WPINC . '/js/thickbox/thickbox.css', null, '1.0');
-	    //if(is_single('kazua-das-artes')){
-		//    wp_enqueue_style('jetpack-carousel', home_url(). '/wp-content/plugins/jetpack/modules/carousel/jetpack-carousel.css', null, '1.0');
-		    //wp_enqueue_style('jetpack-carousel-css', hoget_stylesheet_directory_uri()me_url(). '/wp-content/plugins/jetpack/modules/carousel/jetpack-carousel.css', array(), '20120206', true);
+	//if(is_single('kazua-das-artes')){
+	//wp_enqueue_style('jetpack-carousel', home_url(). '/wp-content/plugins/jetpack/modules/carousel/jetpack-carousel.css', null, '1.0');
+	//wp_enqueue_style('jetpack-carousel-css', hoget_stylesheet_directory_uri()me_url(). '/wp-content/plugins/jetpack/modules/carousel/jetpack-carousel.css', array(), '20120206', true);
 
-		    wp_enqueue_script('ajax-menu-loader-js', get_stylesheet_directory_uri(). '/js/ajax-menu-loader.js', array(), '20120206', true);
-		   // wp_enqueue_script('jetpack-carousel', home_url(). '/wp-content/plugins/jetpack/modules/carousel/jetpack-carousel.js', array(), '20120206', true);
-		    // Note: using  home_url() instead of admin_url() for ajaxurl to be sure  to get same domain on wpcom when using mapped domains (also works on self-hosted)
-		    // Also: not hardcoding path since there is no guarantee site is running on site root in self-hosted context.
-		    // $is_logged_in = is_user_logged_in();
+	wp_enqueue_script('ajax-menu-loader-js', get_stylesheet_directory_uri(). '/js/ajax-menu-loader.js', array(), '20120206', true);
+	// wp_enqueue_script('jetpack-carousel', home_url(). '/wp-content/plugins/jetpack/modules/carousel/jetpack-carousel.js', array(), '20120206', true);
+	// Note: using  home_url() instead of admin_url() for ajaxurl to be sure  to get same domain on wpcom when using mapped domains (also works on self-hosted)
+	// Also: not hardcoding path since there is no guarantee site is running on site root in self-hosted context.
+	// $is_logged_in = is_user_logged_in();
 		    $current_user = wp_get_current_user();
 		    $comment_registration = intval( get_option( 'comment_registration' ) );
 		    $require_name_email   = intval( get_option( 'require_name_email' ) );
@@ -103,9 +103,10 @@ function temazakua_setup() {
 	// Adiciona suporte à Resumo nas Páginas
 	add_post_type_support( 'page', 'excerpt');
 	// Adiciona tamanho de thumbnail
-	add_image_size( 'thumb-academicos',250, 180);
-    add_image_size( 'content-blog-thumb', 243 );
-    add_image_size( 'blog-destaque', 515, 290, true ); // (cropped)
+	add_image_size( 'thumb-academicos', 250, 180);
+	add_image_size( 'content-blog-thumb', 243 );
+	add_image_size( 'blog-destaque-principal', 470, 999999 );
+	add_image_size( 'blog-destaque-menor', 470, 170, true ); // (cropped)
 }
 
 add_action('after_setup_theme', 'temazakua_setup');
@@ -117,7 +118,6 @@ add_action('after_setup_theme', 'temazakua_setup');
 
 function temakazua_widgets_init()
 {
-
     register_sidebar(array(
         'name' => __('Sidebar Blog Autores', 'temakazua'),
         'id' => 'sidebar-autores',
@@ -126,15 +126,12 @@ function temakazua_widgets_init()
         'before_title' => '<h1 class="widget-title">',
         'after_title' => '</h1>',
     ));
-
-
 }
 
 add_action('widgets_init', 'temakazua_widgets_init');
 
-
 /**
- * Load CPT Portfolios.
+ * Load CPT Autores
  */
 /**
  * Adicionamos uma ação no inicio do carregamento do WordPress
@@ -146,7 +143,7 @@ add_action('init', 'create_post_type_autor');
 /** * Esta é a função que é chamada pelo add_action() */
 function create_post_type_autor()
 {
-    /**     * Labels customizados para o tipo de post     */
+    /** Labels customizados para o tipo de post  **/
     $labels = array(
         'name' => _x('Autores', 'post type general name'),
         'singular_name' => _x('Autor', 'post type singular name'),
@@ -163,7 +160,7 @@ function create_post_type_autor()
         'menu_name' => 'Autores',
     );
 
-    /**     * Registamos o tipo de post Autores através desta função
+    /**Registamos o tipo de post Autores através desta função
      * passando-lhe os labels e parâmetros de controle.
      */
     register_post_type('autor', array(
@@ -187,9 +184,7 @@ function create_post_type_autor()
     ));
 
     flush_rewrite_rules();
-
 }
-
 
 register_taxonomy(
     "status",
@@ -202,7 +197,7 @@ register_taxonomy(
     )
 );
 
-// Adiciona a coluna Categorias ao Custom Post Type Projetos
+// Adiciona a coluna Categorias ao Custom Post Type Autores
 add_filter('manage_autor_posts_columns', 'ilc_cpt_columns');
 add_action('manage_autor_posts_custom_column', 'ilc_cpt_custom_column', 10, 2);
 
@@ -236,7 +231,7 @@ function get_categories_array($id){
 // Carrega o campo de ajax nos menus
 require get_stylesheet_directory() . '/inc/field-menu.php';
 
-// acf
+// Advanced Custom Fields
 //define( 'ACF_LITE', true );
 require get_stylesheet_directory() . '/inc/advanced-custom-fields/acf.php';
 require get_stylesheet_directory() . '/inc/acf-fields.php';
