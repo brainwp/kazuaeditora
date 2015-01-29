@@ -235,3 +235,9 @@ require get_stylesheet_directory() . '/inc/field-menu.php';
 //define( 'ACF_LITE', true );
 require get_stylesheet_directory() . '/inc/advanced-custom-fields/acf.php';
 require get_stylesheet_directory() . '/inc/acf-fields.php';
+
+/**
+ * options
+ */
+// require_once get_template_directory() . '/inc/options.php';
+
